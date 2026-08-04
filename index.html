@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>最近見たリンク</title>
+<link rel="manifest" href="/ytaka5004911/manifest.json">
+<meta name="theme-color" content="#2196f3">
+<script>(function(){ navigator.serviceWorker.register('/ytaka5004911/sw.js').then(a=>console.log(a)) })();</script>
+</head>
+<body>
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <input type="text" name="q" placeholder="キーワードを入力">
+  <input type="hidden" name="ie" value="UTF-8">
+  <button type="submit">Googleで検索</button>
+</form>
+<p><a href="https://weather.yahoo.co.jp/weather/">Yahoo天気・災害</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+<h2>最近見たリンク</h2>
+<ul id="history"></ul>
+<script>
+const KEY = "history";
+function showHistory() {
+  const history = JSON.parse(localStorage.getItem(KEY) || "[]");
+  const ul = document.getElementById("history");
+  ul.innerHTML = "";
+  history.forEach(item => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = item.href;
+    a.textContent = item.text;
+    a.target = "_blank";
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+}
+document.querySelectorAll("a").forEach(a => {
+  a.addEventListener("click", () => {
+    let history = JSON.parse(localStorage.getItem(KEY) || "[]");
+    history = history.filter(item => item.href !== a.href);
+    history.unshift({
+      href: a.href,
+      text: a.textContent
+    });
+    history = history.slice(0, 10);
+    localStorage.setItem(KEY, JSON.stringify(history));
+  });
+});
+showHistory();
+</script>
+</body>
+</html>
