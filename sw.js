@@ -1,22 +1,40 @@
-const CACHE = "v1";
+const CACHE = "v2";
+
 self.addEventListener("install", () => {
   self.skipWaiting();
 });
-self.addEventListener("activate", () => {
-  self.clients.claim();
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE) {
+            return caches.delete(key);
+          }
+        })
+      ).then(() => self.clients.claim())
+    )
+  );
 });
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
       const cached = await cache.match(event.request);
-      const fetchPromise = fetch(event.request)
+
+      const network = fetch(event.request)
         .then((response) => {
-          cache.put(event.request, response.clone());
+          if (response.ok) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         })
         .catch(() => cached);
-      return cached || fetchPromise;
+
+      return cached || network;
     })
   );
 });
