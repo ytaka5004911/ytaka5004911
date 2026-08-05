@@ -21,6 +21,14 @@
 <h2>最近見たリンク</h2>
 <ul id="history"></ul>
 <script>
+ const t = () => {
+  const d = new Date().getHours() >= 18 || new Date().getHours() < 6;
+  document.documentElement.style.backgroundColor =
+  document.body.style.backgroundColor = d ? "#121212" : "#fff";
+  document.body.style.color = d ? "#fff" : "#000";
+};
+t();
+setInterval(t, 60000);
  fetch("https://api.p2pquake.net/v1/human-readable").then(r=>r.json()).then(d=>d.forEach(e=>e.code==551&&document.body.append(Object.assign(document.createElement("p"),{textContent:`${e.earthquake.time} ${e.earthquake.hypocenter.name} 最大震度${{10:1,20:2,30:3,40:4,45:"5弱",50:"5強",55:"6弱",60:"6強",70:7}[e.earthquake.maxScale]} M${e.earthquake.hypocenter.magnitude}`}))));
 const KEY = "history";
 function showHistory() {
