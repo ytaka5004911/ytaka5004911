@@ -20,6 +20,35 @@
  <p><a href="https://www.youtube.com/">YouTube</a></p><p><a href="https://transit.yahoo.co.jp/diainfo/area/4">鉄道運行情報</a></p>
 <h2>最近見たリンク</h2>
 <ul id="history"></ul>
+ <p id="time"></p>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  document.getElementById("time").textContent =
+    now.toLocaleTimeString("ja-JP");
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script><p id="usb"></p>
+<p id="online"></p>
+
+<script>
+function update() {
+  document.getElementById("usb").textContent =
+    "USB: " + ("usb" in navigator ? "対応" : "非対応");
+
+  document.getElementById("online").textContent =
+    "オンライン: " + (navigator.onLine ? "はい" : "いいえ");
+}
+
+update();
+
+window.addEventListener("online", update);
+window.addEventListener("offline", update);
+</script>
+ <h2>地震情報</h2>
 <script>
  const t = () => {
   const d = new Date().getHours() >= 18 || new Date().getHours() < 6;
