@@ -110,11 +110,6 @@ function updateEarthquake() {
       lastId = e.id;
 
 
-if ("Notification" in window && Notification.permission === "granted") {
-  new Notification("地震情報", {
-    body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
-  });
-}
 
      
       let p = document.getElementById("earthquake");
