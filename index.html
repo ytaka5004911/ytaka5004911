@@ -26,7 +26,9 @@
 function updateTime() {
   const now = new Date();
   document.getElementById("time").textContent =
-    now.toLocaleTimeString("ja-JP");
+    now.toLocaleTimeString("ja-JP", {
+  hour12: false
+})
 }
 
 updateTime();
@@ -47,6 +49,29 @@ update();
 
 window.addEventListener("online", update);
 window.addEventListener("offline", update);
+</script>
+ <p id="connection"></p>
+
+<script>
+function updateConnection() {
+  const c = navigator.connection;
+
+  if (!c) {
+    document.getElementById("connection").textContent =
+      "Connection API: 非対応";
+    return;
+  }
+
+  document.getElementById("connection").innerHTML =
+    `回線: ${c.effectiveType}<br>` +
+    `速度: ${c.downlink} Mbps<br>` +
+    `遅延: ${c.rtt} ms<br>` +
+    `データ節約: ${c.saveData ? "ON" : "OFF"}`;
+}
+
+updateConnection();
+
+navigator.connection?.addEventListener("change", updateConnection);
 </script>
  <h2>地震情報</h2>
 <script>
