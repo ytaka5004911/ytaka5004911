@@ -105,6 +105,8 @@ function updateEarthquake() {
     })
     .then(data => {
       const e = data.find(item => item.code === 551);
+     console.log("エラー", e);
+     
       if (!e) return;
 
       // 同じ地震なら更新しない
