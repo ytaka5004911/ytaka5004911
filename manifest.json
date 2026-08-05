@@ -3,7 +3,7 @@
   "short_name": "ホーム",
   "description": "ホームページ",
   "start_url": "/ytaka5004911/",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
   "orientation": "any",
