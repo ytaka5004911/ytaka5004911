@@ -75,12 +75,13 @@ updateConnection();
 
 navigator.connection?.addEventListener("change", updateConnection);
 </script>
- <h2>地震情報</h2>
+ 
+<h2>地震情報</h2>
+
+<p id="earthquake">取得中...</p>
+
 <script>
- if ("Notification" in window && Notification.permission === "default") {
-  Notification.requestPermission();
- }
- const scale = {
+const scale = {
   0: 0,
   10: 1,
   20: 2,
@@ -95,91 +96,93 @@ navigator.connection?.addEventListener("change", updateConnection);
 
 let lastId = "";
 
-function updateEarthquake() {
-  fetch("https://api.p2pquake.net/v1/human-readable")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("HTTP Error");
-      }
-      return response.json();
-    })
-    .then(data => {
-      const e = data.find(item => item.code === 551);
-     console.log("エラー", e);
-     
-      if (!e) return;
+async function updateEarthquake() {
+  try {
+    const response = await fetch(
+      "https://api.p2pquake.net/v1/human-readable"
+    );
 
-      // 同じ地震なら更新しない
-      if (e.id === lastId) return;
-      lastId = e.id;
+    if (!response.ok) {
+      throw new Error("HTTP Error");
+    }
+
+    const data = await response.json();
+
+    const e = data.find(item => item.code === 551);
+
+    if (!e) {
+      document.getElementById("earthquake").textContent =
+        "現在、地震情報はありません";
+      return;
+    }
+
+    // 同じ地震なら更新しない
+    if (e._id.$oid === lastId) return;
+    lastId = e._id.$oid;
+
+    const hypo = e.earthquake.hypocenter;
+
+    const intensity =
+      scale[e.earthquake.maxScale] ?? "不明";
+
+    const magnitude =
+      hypo.magnitude
+        ? `M${hypo.magnitude}`
+        : "M不明";
+
+    const depth =
+      hypo.depth
+        ? `深さ${hypo.depth}`
+        : "深さ不明";
+
+    document.getElementById("earthquake").textContent =
+      `${e.time} / ${hypo.name} / ${depth} / 最大震度${intensity} / ${magnitude}`;
 
 
+    // 通知
+    if (
+      "Notification" in window &&
+      Notification.permission === "granted"
+    ) {
+      new Notification("地震情報", {
+        body:
+          `${hypo.name}\n最大震度${intensity}\n${magnitude}`
+      });
+    }
 
-     
-      let p = document.getElementById("earthquake");
-      if (!p) {
-        p = document.createElement("p");
-        p.id = "earthquake";
-        document.body.appendChild(p);
-      }
+  } catch (error) {
+    console.error(error);
 
-      const intensity = scale[e.earthquake.maxScale] ?? "不明";
-
-      const hypo = e.earthquake.hypocenter;
-
-      const date = new Date(e.earthquake.time);
-
-const time = isNaN(date)
-  ? "時刻不明"
-  : date.toLocaleString("ja-JP");
-
-
-      const magnitude =
-        hypo.magnitude >= 0 ? `M${hypo.magnitude}` : "M不明";
-
-      const depth =
-        hypo.depth >= 0 ? `深さ${hypo.depth}km` : "深さ不明";
-
-      p.textContent =
-        `${time} / ${hypo.name} / ${depth} / 最大震度${intensity} / ${magnitude}`;
-     if ("Notification" in window && Notification.permission === "granted") {
-  const notification = new Notification("地震情報", {
-    body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
-  });
-
-  notification.onclick = () => {
-    window.focus();
-  };
-     }
-    })
- 
-   .catch(() => {
-      let p = document.getElementById("earthquake");
-      if (!p) {
-        p = document.createElement("p");
-        p.id = "earthquake";
-        document.body.appendChild(p);
-      }
-      p.textContent = "地震情報を取得できませんでした。";
-    });
+    document.getElementById("earthquake").textContent =
+      "地震情報を取得できませんでした。";
+  }
 }
 
-// 起動時
+
+// 初回
 updateEarthquake();
 
-// 5分ごとに更新
+// 5分ごと
 setInterval(updateEarthquake, 5 * 60 * 1000);
 
-// タブに戻ったら更新
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) {
-    updateEarthquake();
-  }
-});
 
-// オンラインになったら更新
-window.addEventListener("online", updateEarthquake);
- 
+// タブに戻った時
+document.addEventListener(
+  "visibilitychange",
+  () => {
+    if (!document.hidden) {
+      updateEarthquake();
+    }
+  }
+);
+
+
+// オンライン復帰時
+window.addEventListener(
+  "online",
+  updateEarthquake
+);
+
 </script>
 </body>
 </html>
