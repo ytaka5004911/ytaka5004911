@@ -75,43 +75,105 @@ navigator.connection?.addEventListener("change", updateConnection);
 </script>
  <h2>地震情報</h2>
 <script>
- const t = () => {
-  const d = new Date().getHours() >= 18 || new Date().getHours() < 6;
-  document.documentElement.style.backgroundColor =
-  document.body.style.backgroundColor = d ? "#121212" : "#fff";
-  document.body.style.color = d ? "#fff" : "#000";
+ if ("Notification" in window && Notification.permission === "default") {
+  Notification.requestPermission();
+ }
+ const scale = {
+  0: 0,
+  10: 1,
+  20: 2,
+  30: 3,
+  40: 4,
+  45: "5弱",
+  50: "5強",
+  55: "6弱",
+  60: "6強",
+  70: 7
 };
-t();
-setInterval(t, 60000);
- fetch("https://api.p2pquake.net/v1/human-readable").then(r=>r.json()).then(d=>d.forEach(e=>e.code==551&&document.body.append(Object.assign(document.createElement("p"),{textContent:`${e.earthquake.time} ${e.earthquake.hypocenter.name} 最大震度${{10:1,20:2,30:3,40:4,45:"5弱",50:"5強",55:"6弱",60:"6強",70:7}[e.earthquake.maxScale]} M${e.earthquake.hypocenter.magnitude}`}))));
-const KEY = "history";
-function showHistory() {
-  const history = JSON.parse(localStorage.getItem(KEY) || "[]");
-  const ul = document.getElementById("history");
-  ul.innerHTML = "";
-  history.forEach(item => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = item.href;
-    a.textContent = item.text;
-    a.target = "_blank";
-    li.appendChild(a);
-    ul.appendChild(li);
+
+let lastId = "";
+
+function updateEarthquake() {
+  fetch("https://api.p2pquake.net/v1/human-readable")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("HTTP Error");
+      }
+      return response.json();
+    })
+    .then(data => {
+      const e = data.find(item => item.code === 551);
+      if (!e) return;
+
+      // 同じ地震なら更新しない
+      if (e.id === lastId) return;
+      lastId = e.id;
+
+
+if ("Notification" in window && Notification.permission === "granted") {
+  new Notification("地震情報", {
+    body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
   });
 }
-document.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => {
-    let history = JSON.parse(localStorage.getItem(KEY) || "[]");
-    history = history.filter(item => item.href !== a.href);
-    history.unshift({
-      href: a.href,
-      text: a.textContent
-    });
-    history = history.slice(0, 10);
-    localStorage.setItem(KEY, JSON.stringify(history));
-  });
+
+     
+      let p = document.getElementById("earthquake");
+      if (!p) {
+        p = document.createElement("p");
+        p.id = "earthquake";
+        document.body.appendChild(p);
+      }
+
+      const intensity = scale[e.earthquake.maxScale] ?? "不明";
+
+      const hypo = e.earthquake.hypocenter;
+
+      const time = new Date(e.earthquake.time).toLocaleString("ja-JP");
+
+      const magnitude =
+        hypo.magnitude >= 0 ? `M${hypo.magnitude}` : "M不明";
+
+      const depth =
+        hypo.depth >= 0 ? `深さ${hypo.depth}km` : "深さ不明";
+
+      p.textContent =
+        `${time} / ${hypo.name} / ${depth} / 最大震度${intensity} / ${magnitude}`;
+     const notification = new Notification("地震情報", {
+  body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
 });
-showHistory();
+
+notification.onclick = () => {
+  window.focus();
+};
+    })
+ 
+   .catch(() => {
+      let p = document.getElementById("earthquake");
+      if (!p) {
+        p = document.createElement("p");
+        p.id = "earthquake";
+        document.body.appendChild(p);
+      }
+      p.textContent = "地震情報を取得できませんでした。";
+    });
+}
+
+// 起動時
+updateEarthquake();
+
+// 5分ごとに更新
+setInterval(updateEarthquake, 5 * 60 * 1000);
+
+// タブに戻ったら更新
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    updateEarthquake();
+  }
+});
+
+// オンラインになったら更新
+window.addEventListener("online", updateEarthquake);
+ 
 </script>
 </body>
 </html>
