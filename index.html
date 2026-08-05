@@ -138,13 +138,15 @@ if ("Notification" in window && Notification.permission === "granted") {
 
       p.textContent =
         `${time} / ${hypo.name} / ${depth} / 最大震度${intensity} / ${magnitude}`;
-     const notification = new Notification("地震情報", {
-  body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
-});
+     if ("Notification" in window && Notification.permission === "granted") {
+  const notification = new Notification("地震情報", {
+    body: `${hypo.name}\n最大震度${intensity}\n${magnitude}`
+  });
 
-notification.onclick = () => {
-  window.focus();
-};
+  notification.onclick = () => {
+    window.focus();
+  };
+     }
     })
  
    .catch(() => {
