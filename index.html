@@ -140,16 +140,18 @@ async function updateEarthquake() {
 
 
     // 通知
-    if (
-      "Notification" in window &&
-      Notification.permission === "granted"
-    ) {
-      new Notification("地震情報", {
-        body:
-          `${hypo.name}\n最大震度${intensity}\n${magnitude}`
-      });
-    }
-
+   if (
+  "Notification" in window &&
+  Notification.permission === "granted"
+) {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.showNotification("地震情報", {
+      body:
+        `${hypo.name}\n最大震度${intensity}\n${magnitude}`,
+      icon: "/ytaka5004911/icon-192.png"
+    });
+  });
+   }
   } catch (error) {
     console.error(error);
 
