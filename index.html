@@ -128,6 +128,8 @@ function updateEarthquake() {
 const time = isNaN(date)
   ? "時刻不明"
   : date.toLocaleString("ja-JP");
+
+
       const magnitude =
         hypo.magnitude >= 0 ? `M${hypo.magnitude}` : "M不明";
 
