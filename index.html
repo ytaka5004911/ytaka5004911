@@ -55,19 +55,32 @@ const m = {
   70: 7
 };
 
-fetch("https://api.p2pquake.net/v1/human-readable?limit=5")
+fetch("https://api.p2pquake.net/v1/human-readable?limit=20")
   .then(r => r.json())
   .then(d => {
-    q.innerHTML = d.map(({ earthquake: e }) => `
-      ${e.time}<br>
-      ${e.hypocenter.name}<br>
-      最大震度 ${m[e.maxScale] ?? "不明"}
-      <hr>
-    `).join("");
-  })
-  .catch(eoror => {
-    q.textContent = "取得できませんでした";
-   console.log("エラー", eoror);
+    q.innerHTML = d
+      .filter(x => x.code === 551 || x.code === 5610)
+      .slice(0, 5)
+      .map(x => {
+        if (x.code === 551) {
+          const e = x.earthquake;
+          return `
+            <b>🌍 地震情報</b><br>
+            ${e.time}<br>
+            ${e.hypocenter.name || "調査中"}<br>
+            最大震度 ${m[e.maxScale] ?? "不明"}
+            <hr>
+          `;
+        }
+
+        return `
+          <b>📳 地震感知情報</b><br>
+          報告数: ${x.count}件<br>
+          地域: ${Object.keys(x.areas).join("、")}
+          <hr>
+        `;
+      })
+      .join("");
   });
 </script>
  <script>
