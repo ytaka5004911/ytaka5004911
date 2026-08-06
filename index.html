@@ -65,8 +65,9 @@ fetch("https://api.p2pquake.net/v1/human-readable?limit=5")
       <hr>
     `).join("");
   })
-  .catch(() => {
+  .catch(eoror => {
     q.textContent = "取得できませんでした";
+   console.log("エラー", eoror);
   });
 </script>
  <script>
