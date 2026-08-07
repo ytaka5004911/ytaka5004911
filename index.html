@@ -96,5 +96,6 @@ fetch("https://api.p2pquake.net/v1/human-readable?limit=20")
 }
 updateTheme();           // 最初に実行
 setInterval(updateTheme, 60000); // 1分ごとに確認
+  Notification.requestPermission(),m={"16:59":"まもなくダークモードになります。","5:0":"まもなくライトモードになります。"},setInterval(()=>{d=new Date,t=d.getHours()+":"+d.getMinutes(),d.getSeconds()||m[t]&&navigator.serviceWorker.ready.then(r=>r.showNotification(m[t]))},1e3)
  </script></body>
 </html>
