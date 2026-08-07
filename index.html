@@ -43,7 +43,7 @@ body {
  <div id="q"></div>
 
 <script>
-const m = {
+const miiii = {
   10: 1,
   20: 2,
   30: 3,
@@ -68,7 +68,7 @@ fetch("https://api.p2pquake.net/v1/human-readable?limit=20")
             <b>🌍 地震情報</b><br>
             ${e.time}<br>
             ${e.hypocenter.name || "調査中"}<br>
-            最大震度 ${m[e.maxScale] ?? "不明"}
+            最大震度 ${miiii[e.maxScale] ?? "不明"}
             <hr>
           `;
         }
