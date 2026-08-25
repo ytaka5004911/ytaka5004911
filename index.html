@@ -2,6 +2,7 @@
 <html lang="ja" dir="ltr">
 <head>
 <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ホームページ</title>
 <link rel="manifest" href="/ytaka5004911/manifest.json">
@@ -9,8 +10,8 @@
 <script>if(window.navigator.serviceWorker)window.navigator.serviceWorker.register('/ytaka5004911/sw.js').catch(window.console.log);</script>
 </head>
 <body>
-<form action="https://www.google.com/search" method="get" target="_blank">
-<input type="text" name="q">
+<form role="main" action="https://www.google.com/search" method="get" target="_blank">
+<input type="text" name="q" aria-label="Googleで検索する">
 <input type="hidden" name="ie" value="UTF-8">
 <input type="hidden" name="oe" value="UTF-8">
 <input type="hidden" name="hl" value="ja">
