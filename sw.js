@@ -27,7 +27,7 @@ self.addEventListener("fetch", (event) => {
 
       const network = fetch(event.request)
         .then((response) => {
-          if (response.ok) {
+          if (response.ok && event.request.url.startsWith('http')) {
             cache.put(event.request, response.clone());
           }
           return response;
