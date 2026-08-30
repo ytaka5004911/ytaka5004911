@@ -1,0 +1,42 @@
+{
+  "name": "ホームページ",
+  "short_name": "ホーム",
+  "description": "ホームページ",
+  "start_url": "/ytaka5004911/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196f3",
+  "shortcuts": [
+    {
+      "name": "OXゲーム",
+      "short_name": "OXゲーム",
+      "description": "O×ゲームを遊ぶ",
+      "url": "/ytaka5004911/games.html"
+    },
+    {
+      "name": "色調合",
+      "short_name": "色調合",
+      "description": "色を混ぜる",
+      "url": "/ytaka5004911/colorMix.html"
+    }
+  ],
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/ytaka5004911/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/ytaka5004911/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+home",
+      "url": "/ytaka5004911/"
+    }
+  ]
+}
