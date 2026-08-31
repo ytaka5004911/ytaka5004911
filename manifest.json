@@ -11,13 +11,27 @@
       "name": "OXゲーム",
       "short_name": "OXゲーム",
       "description": "O×ゲームを遊ぶ",
-      "url": "/ytaka5004911/games.html"
+      "url": "/ytaka5004911/games.html",
+      "icons": [
+       {
+        "src": "/ytaka5004911/oxgames-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+       }
+      ]
     },
     {
       "name": "色調合",
       "short_name": "色調合",
       "description": "色を混ぜる",
-      "url": "/ytaka5004911/colorMix.html"
+      "url": "/ytaka5004911/colorMix.html",
+      "icons": [
+       {
+        "src": "/ytaka5004911/colormix-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+       }
+      ]
     }
   ],
   "orientation": "any",
