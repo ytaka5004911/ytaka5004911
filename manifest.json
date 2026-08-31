@@ -36,7 +36,7 @@
   "protocol_handlers": [
     {
       "protocol": "web+home",
-      "url": "/ytaka5004911/"
+      "url": "/ytaka5004911/?url=%s"
     }
   ]
 }
