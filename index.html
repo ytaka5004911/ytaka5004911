@@ -500,6 +500,13 @@ document.getElementById(
       nextHoliday.date.getDay()
     ]
   }）`;
+document.addEventListener('keydown', e => {
+  const n = Number(e.code.replace('Digit', ''));
+  if (!n || n > 9) return;
+  const links = document.querySelectorAll('ol a');
+  const target = links[n - 1];
+  if (target) target.click();
+});
 
 </script>
 <main>
