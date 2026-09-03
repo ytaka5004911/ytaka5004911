@@ -501,7 +501,7 @@ document.getElementById(
     ]
   }）`;
 document.addEventListener('keydown', e => {
-  const n = Number(e.code.replace('Digit', ''));
+  const n = Number(e.code.replace('Numpad', ''));
   if (!n || n > 9) return;
   const links = document.querySelectorAll('ol a');
   const target = links[n - 1];
