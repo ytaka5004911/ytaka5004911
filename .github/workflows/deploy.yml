@@ -15,7 +15,7 @@ jobs:
     steps:
      
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       
       - name: Update Service Worker version
@@ -48,9 +48,9 @@ jobs:
 
       
       - name: Deploy to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
       - name: Publish to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
