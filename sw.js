@@ -10,7 +10,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((keys) =>
       Promise.all(
         keys.map((key) => {
-          if (key !== CACHE) {
+          if (key !== CACHE_NAME) {
             return caches.delete(key);
           }
         })
@@ -23,7 +23,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
   event.respondWith(
-    caches.open(CACHE).then(async (cache) => {
+    caches.open(CACHE_NAME).then(async (cache) => {
       const cached = await cache.match(event.request);
 
       const network = fetch(event.request)
