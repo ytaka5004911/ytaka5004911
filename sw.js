@@ -1,4 +1,5 @@
-const CACHE = "public2"; 
+const CACHE_NAME = 'my-app-cache-__VERSION__';
+
 
 self.addEventListener("install", () => {
   self.skipWaiting();
