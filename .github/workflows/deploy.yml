@@ -1,0 +1,56 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+     
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      
+      - name: Update Service Worker version
+        run: |
+          HASH=$(git rev-parse --short HEAD)
+
+          echo "Commit hash: $HASH"
+
+          sed -i "s/__VERSION__/$HASH/g" sw.js
+
+          echo "Updated sw.js:"
+          grep "CACHE_NAME" sw.js
+
+
+      - name: Verify Service Worker version
+        run: |
+          if grep -q "__VERSION__" sw.js; then
+            echo "ERROR: __VERSION__ was not replaced!"
+            exit 1
+          fi
+
+          echo "Service Worker version successfully updated."
+
+     
+      - name: Verify Service Worker syntax
+        run: |
+          node --check sw.js
+
+          echo "Service Worker syntax is valid."
+
+      
+      - name: Deploy to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Publish to GitHub Pages
+        uses: actions/deploy-pages@v4
