@@ -22,7 +22,7 @@
     <input type="hidden" name="hl" value="ja">
     <button aria-label="検索する" type="submit">Googleで検索</button>
     <button aria-label="AI検索する" type="submit" name="udm" value="50">AI検索</button>
-    <button aria-label="URLに転送する" type="button" onclick="if(document.getElementById('search').value.startsWith('http')){location.href=document.getElementById('search').value;document.getElementById('search').value='';}">URLに転送する</button>
+    <button aria-label="URLに転送する" type="button" onclick="if(document.getElementById('search').value.startsWith('http')){window.open(document.getElementById('search').value, '_blank');document.getElementById('search').value='';}">URLに転送する</button>
   </form>
   <nav aria-label="リンク">
     <ul>
