@@ -1,0 +1,4111 @@
+{
+  "version": "1.0",
+  "count": 500,
+  "description": "500 website shortcuts with aliases for a site launcher.",
+  "sites": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com/",
+      "aliases": [
+        "google",
+        "グーグル"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com/",
+      "aliases": [
+        "gmail",
+        "google mail",
+        "ジーメール"
+      ],
+      "category": "mail"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/",
+      "aliases": [
+        "youtube",
+        "yt",
+        "ユーチューブ"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "aliases": [
+        "github",
+        "git hub"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.com/",
+      "aliases": [
+        "discord",
+        "ディスコード"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://www.wikipedia.org/",
+      "aliases": [
+        "wikipedia",
+        "wiki",
+        "ウィキペディア"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com/",
+      "aliases": [
+        "copilot",
+        "cooilot",
+        "microsoft copilot"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "aliases": [
+        "chatgpt",
+        "chat gpt",
+        "gpt"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "99 Nights in the Forest Wiki",
+      "url": "https://99-nights-in-the-forest.fandom.com/wiki/99_Nights_in_the_Forest_Wiki",
+      "aliases": [
+        "99 nights",
+        "99 nights in the forest",
+        "99 nights wiki"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Bing",
+      "url": "https://www.bing.com/",
+      "aliases": [
+        "bing",
+        "ビング"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Yahoo! Japan",
+      "url": "https://www.yahoo.co.jp/",
+      "aliases": [
+        "yahoo",
+        "ヤフー"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "DuckDuckGo",
+      "url": "https://duckduckgo.com/",
+      "aliases": [
+        "duckduckgo",
+        "ddg"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Brave Search",
+      "url": "https://search.brave.com/",
+      "aliases": [
+        "brave search"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Ecosia",
+      "url": "https://www.ecosia.org/",
+      "aliases": [
+        "ecosia"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Startpage",
+      "url": "https://www.startpage.com/",
+      "aliases": [
+        "startpage"
+      ],
+      "category": "search"
+    },
+    {
+      "name": "Outlook",
+      "url": "https://outlook.live.com/",
+      "aliases": [
+        "outlook",
+        "hotmail"
+      ],
+      "category": "mail"
+    },
+    {
+      "name": "Proton Mail",
+      "url": "https://mail.proton.me/",
+      "aliases": [
+        "protonmail",
+        "proton mail"
+      ],
+      "category": "mail"
+    },
+    {
+      "name": "Yahoo! Mail",
+      "url": "https://mail.yahoo.co.jp/",
+      "aliases": [
+        "yahoo mail"
+      ],
+      "category": "mail"
+    },
+    {
+      "name": "Google Drive",
+      "url": "https://drive.google.com/",
+      "aliases": [
+        "drive",
+        "google drive"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "OneDrive",
+      "url": "https://onedrive.live.com/",
+      "aliases": [
+        "onedrive",
+        "one drive"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Dropbox",
+      "url": "https://www.dropbox.com/",
+      "aliases": [
+        "dropbox"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Google Docs",
+      "url": "https://docs.google.com/",
+      "aliases": [
+        "docs",
+        "google docs"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Sheets",
+      "url": "https://sheets.google.com/",
+      "aliases": [
+        "sheets",
+        "google sheets"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Slides",
+      "url": "https://slides.google.com/",
+      "aliases": [
+        "slides",
+        "google slides"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Calendar",
+      "url": "https://calendar.google.com/",
+      "aliases": [
+        "calendar",
+        "gcal"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://maps.google.com/",
+      "aliases": [
+        "maps",
+        "google maps"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "YouTube Music",
+      "url": "https://music.youtube.com/",
+      "aliases": [
+        "youtube music",
+        "yt music"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Twitch",
+      "url": "https://www.twitch.tv/",
+      "aliases": [
+        "twitch",
+        "ツイッチ"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://www.netflix.com/",
+      "aliases": [
+        "netflix",
+        "ネットフリックス"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://open.spotify.com/",
+      "aliases": [
+        "spotify",
+        "スポティファイ"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "SoundCloud",
+      "url": "https://soundcloud.com/",
+      "aliases": [
+        "soundcloud"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "GitLab",
+      "url": "https://gitlab.com/",
+      "aliases": [
+        "gitlab"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Bitbucket",
+      "url": "https://bitbucket.org/",
+      "aliases": [
+        "bitbucket"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com/",
+      "aliases": [
+        "stackoverflow",
+        "stack overflow"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "npm",
+      "url": "https://www.npmjs.com/",
+      "aliases": [
+        "npm"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "PyPI",
+      "url": "https://pypi.org/",
+      "aliases": [
+        "pypi"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "MDN",
+      "url": "https://developer.mozilla.org/",
+      "aliases": [
+        "mdn",
+        "mozilla developer"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "W3Schools",
+      "url": "https://www.w3schools.com/",
+      "aliases": [
+        "w3schools"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "CodePen",
+      "url": "https://codepen.io/",
+      "aliases": [
+        "codepen"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Replit",
+      "url": "https://replit.com/",
+      "aliases": [
+        "replit"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "aliases": [
+        "vercel"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Netlify",
+      "url": "https://www.netlify.com/",
+      "aliases": [
+        "netlify"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "aliases": [
+        "canva",
+        "キャンバ"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "aliases": [
+        "figma",
+        "フィグマ"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Adobe",
+      "url": "https://www.adobe.com/",
+      "aliases": [
+        "adobe",
+        "アドビ"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Notion",
+      "url": "https://www.notion.so/",
+      "aliases": [
+        "notion",
+        "ノーション"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Trello",
+      "url": "https://trello.com/",
+      "aliases": [
+        "trello"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Slack",
+      "url": "https://slack.com/",
+      "aliases": [
+        "slack"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Microsoft Teams",
+      "url": "https://teams.microsoft.com/",
+      "aliases": [
+        "teams",
+        "microsoft teams"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Zoom",
+      "url": "https://zoom.us/",
+      "aliases": [
+        "zoom"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://www.reddit.com/",
+      "aliases": [
+        "reddit",
+        "レディット"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/",
+      "aliases": [
+        "x",
+        "twitter",
+        "ツイッター"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/",
+      "aliases": [
+        "facebook",
+        "fb"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/",
+      "aliases": [
+        "instagram",
+        "insta",
+        "インスタ"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "aliases": [
+        "linkedin"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://www.pinterest.com/",
+      "aliases": [
+        "pinterest"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/",
+      "aliases": [
+        "tiktok",
+        "ティックトック"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Threads",
+      "url": "https://www.threads.net/",
+      "aliases": [
+        "threads"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Amazon Japan",
+      "url": "https://www.amazon.co.jp/",
+      "aliases": [
+        "amazon",
+        "アマゾン"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Rakuten",
+      "url": "https://www.rakuten.co.jp/",
+      "aliases": [
+        "rakuten",
+        "楽天"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "eBay",
+      "url": "https://www.ebay.com/",
+      "aliases": [
+        "ebay"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Mercari",
+      "url": "https://jp.mercari.com/",
+      "aliases": [
+        "mercari",
+        "メルカリ"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Yahoo! Shopping",
+      "url": "https://shopping.yahoo.co.jp/",
+      "aliases": [
+        "yahoo shopping"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai/",
+      "aliases": [
+        "claude"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://gemini.google.com/",
+      "aliases": [
+        "gemini",
+        "google gemini"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/",
+      "aliases": [
+        "perplexity"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "aliases": [
+        "huggingface",
+        "hugging face"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "DeepL",
+      "url": "https://www.deepl.com/translator",
+      "aliases": [
+        "deepl"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "Google Translate",
+      "url": "https://translate.google.com/",
+      "aliases": [
+        "translate",
+        "google translate"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "Coursera",
+      "url": "https://www.coursera.org/",
+      "aliases": [
+        "coursera"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "edX",
+      "url": "https://www.edx.org/",
+      "aliases": [
+        "edx"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Khan Academy",
+      "url": "https://www.khanacademy.org/",
+      "aliases": [
+        "khan academy"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Duolingo",
+      "url": "https://www.duolingo.com/",
+      "aliases": [
+        "duolingo"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Quizlet",
+      "url": "https://quizlet.com/",
+      "aliases": [
+        "quizlet"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Wolfram Alpha",
+      "url": "https://www.wolframalpha.com/",
+      "aliases": [
+        "wolfram",
+        "wolfram alpha"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/",
+      "aliases": [
+        "imdb"
+      ],
+      "category": "entertainment"
+    },
+    {
+      "name": "Letterboxd",
+      "url": "https://letterboxd.com/",
+      "aliases": [
+        "letterboxd"
+      ],
+      "category": "entertainment"
+    },
+    {
+      "name": "Goodreads",
+      "url": "https://www.goodreads.com/",
+      "aliases": [
+        "goodreads"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/",
+      "aliases": [
+        "steam"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Epic Games Store",
+      "url": "https://store.epicgames.com/",
+      "aliases": [
+        "epic games",
+        "egs"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Roblox",
+      "url": "https://www.roblox.com/",
+      "aliases": [
+        "roblox"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Minecraft",
+      "url": "https://www.minecraft.net/",
+      "aliases": [
+        "minecraft"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "itch.io",
+      "url": "https://itch.io/",
+      "aliases": [
+        "itch",
+        "itch.io"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Nexus Mods",
+      "url": "https://www.nexusmods.com/",
+      "aliases": [
+        "nexus mods"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "IGN",
+      "url": "https://www.ign.com/",
+      "aliases": [
+        "ign"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "GameSpot",
+      "url": "https://www.gamespot.com/",
+      "aliases": [
+        "gamespot"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "BBC",
+      "url": "https://www.bbc.com/",
+      "aliases": [
+        "bbc"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "CNN",
+      "url": "https://www.cnn.com/",
+      "aliases": [
+        "cnn"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/",
+      "aliases": [
+        "reuters"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "The Guardian",
+      "url": "https://www.theguardian.com/",
+      "aliases": [
+        "guardian"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "NHK",
+      "url": "https://www3.nhk.or.jp/",
+      "aliases": [
+        "nhk",
+        "nhk news"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "朝日新聞",
+      "url": "https://www.asahi.com/",
+      "aliases": [
+        "asahi",
+        "朝日"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "読売新聞",
+      "url": "https://www.yomiuri.co.jp/",
+      "aliases": [
+        "yomiuri",
+        "読売"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "毎日新聞",
+      "url": "https://mainichi.jp/",
+      "aliases": [
+        "mainichi",
+        "毎日新聞"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "日本経済新聞",
+      "url": "https://www.nikkei.com/",
+      "aliases": [
+        "nikkei",
+        "日経"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "ITmedia",
+      "url": "https://www.itmedia.co.jp/",
+      "aliases": [
+        "itmedia"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "GIGAZINE",
+      "url": "https://gigazine.net/",
+      "aliases": [
+        "gigazine"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Qiita",
+      "url": "https://qiita.com/",
+      "aliases": [
+        "qiita"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Zenn",
+      "url": "https://zenn.dev/",
+      "aliases": [
+        "zenn"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "pixiv",
+      "url": "https://www.pixiv.net/",
+      "aliases": [
+        "pixiv",
+        "ピクシブ"
+      ],
+      "category": "art"
+    },
+    {
+      "name": "ArtStation",
+      "url": "https://www.artstation.com/",
+      "aliases": [
+        "artstation"
+      ],
+      "category": "art"
+    },
+    {
+      "name": "Dribbble",
+      "url": "https://dribbble.com/",
+      "aliases": [
+        "dribbble"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Behance",
+      "url": "https://www.behance.net/",
+      "aliases": [
+        "behance"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "aliases": [
+        "unsplash"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Pexels",
+      "url": "https://www.pexels.com/",
+      "aliases": [
+        "pexels"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Pixabay",
+      "url": "https://pixabay.com/",
+      "aliases": [
+        "pixabay"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/",
+      "aliases": [
+        "osm",
+        "openstreetmap"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/",
+      "aliases": [
+        "tripadvisor"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Booking.com",
+      "url": "https://www.booking.com/",
+      "aliases": [
+        "booking"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Expedia",
+      "url": "https://www.expedia.com/",
+      "aliases": [
+        "expedia"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Airbnb",
+      "url": "https://www.airbnb.com/",
+      "aliases": [
+        "airbnb"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Japan Travel",
+      "url": "https://www.japan.travel/",
+      "aliases": [
+        "japan travel"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "NAVITIME",
+      "url": "https://www.navitime.co.jp/",
+      "aliases": [
+        "navitime"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "乗換案内",
+      "url": "https://transit.yahoo.co.jp/",
+      "aliases": [
+        "transit",
+        "乗換案内"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "じゃらん",
+      "url": "https://www.jalan.net/",
+      "aliases": [
+        "jalan",
+        "じゃらん"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "楽天トラベル",
+      "url": "https://travel.rakuten.co.jp/",
+      "aliases": [
+        "rakuten travel"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "ニコニコ動画",
+      "url": "https://www.nicovideo.jp/",
+      "aliases": [
+        "niconico",
+        "ニコニコ"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "ABEMA",
+      "url": "https://abema.tv/",
+      "aliases": [
+        "abema"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "TVer",
+      "url": "https://tver.jp/",
+      "aliases": [
+        "tver"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Dailymotion",
+      "url": "https://www.dailymotion.com/",
+      "aliases": [
+        "dailymotion"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Vimeo",
+      "url": "https://vimeo.com/",
+      "aliases": [
+        "vimeo"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/",
+      "aliases": [
+        "crunchyroll"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Disney+",
+      "url": "https://www.disneyplus.com/",
+      "aliases": [
+        "disney plus",
+        "disney+"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Prime Video",
+      "url": "https://www.primevideo.com/",
+      "aliases": [
+        "prime video"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Hulu",
+      "url": "https://www.hulu.com/",
+      "aliases": [
+        "hulu"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "U-NEXT",
+      "url": "https://video.unext.jp/",
+      "aliases": [
+        "unext",
+        "u-next"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "radiko",
+      "url": "https://radiko.jp/",
+      "aliases": [
+        "radiko"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Apple Music",
+      "url": "https://music.apple.com/",
+      "aliases": [
+        "apple music"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Amazon Music",
+      "url": "https://music.amazon.com/",
+      "aliases": [
+        "amazon music"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Bandcamp",
+      "url": "https://bandcamp.com/",
+      "aliases": [
+        "bandcamp"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Last.fm",
+      "url": "https://www.last.fm/",
+      "aliases": [
+        "lastfm",
+        "last.fm"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Genius",
+      "url": "https://genius.com/",
+      "aliases": [
+        "genius"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Discogs",
+      "url": "https://www.discogs.com/",
+      "aliases": [
+        "discogs"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Deezer",
+      "url": "https://www.deezer.com/",
+      "aliases": [
+        "deezer"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Tidal",
+      "url": "https://tidal.com/",
+      "aliases": [
+        "tidal"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Mixcloud",
+      "url": "https://www.mixcloud.com/",
+      "aliases": [
+        "mixcloud"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "Kaggle",
+      "url": "https://www.kaggle.com/",
+      "aliases": [
+        "kaggle"
+      ],
+      "category": "data"
+    },
+    {
+      "name": "Google Colab",
+      "url": "https://colab.research.google.com/",
+      "aliases": [
+        "colab",
+        "google colab"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Jupyter",
+      "url": "https://jupyter.org/",
+      "aliases": [
+        "jupyter"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "aliases": [
+        "hacker news",
+        "hn"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com/",
+      "aliases": [
+        "product hunt"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/",
+      "aliases": [
+        "techcrunch"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/",
+      "aliases": [
+        "the verge"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://arstechnica.com/",
+      "aliases": [
+        "ars technica"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "MacRumors",
+      "url": "https://www.macrumors.com/",
+      "aliases": [
+        "macrumors"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Android Authority",
+      "url": "https://www.androidauthority.com/",
+      "aliases": [
+        "android authority"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "PCMag",
+      "url": "https://www.pcmag.com/",
+      "aliases": [
+        "pcmag"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/",
+      "aliases": [
+        "tom's hardware"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "How-To Geek",
+      "url": "https://www.howtogeek.com/",
+      "aliases": [
+        "how to geek"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Lifehacker",
+      "url": "https://lifehacker.com/",
+      "aliases": [
+        "lifehacker"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "MakeUseOf",
+      "url": "https://www.makeuseof.com/",
+      "aliases": [
+        "makeuseof"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/",
+      "aliases": [
+        "medium"
+      ],
+      "category": "writing"
+    },
+    {
+      "name": "Substack",
+      "url": "https://substack.com/",
+      "aliases": [
+        "substack"
+      ],
+      "category": "writing"
+    },
+    {
+      "name": "WordPress",
+      "url": "https://wordpress.com/",
+      "aliases": [
+        "wordpress"
+      ],
+      "category": "writing"
+    },
+    {
+      "name": "Blogger",
+      "url": "https://www.blogger.com/",
+      "aliases": [
+        "blogger"
+      ],
+      "category": "writing"
+    },
+    {
+      "name": "Tumblr",
+      "url": "https://www.tumblr.com/",
+      "aliases": [
+        "tumblr"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Mastodon",
+      "url": "https://joinmastodon.org/",
+      "aliases": [
+        "mastodon"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/",
+      "aliases": [
+        "bluesky"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Patreon",
+      "url": "https://www.patreon.com/",
+      "aliases": [
+        "patreon"
+      ],
+      "category": "creator"
+    },
+    {
+      "name": "Ko-fi",
+      "url": "https://ko-fi.com/",
+      "aliases": [
+        "kofi",
+        "ko-fi"
+      ],
+      "category": "creator"
+    },
+    {
+      "name": "Kickstarter",
+      "url": "https://www.kickstarter.com/",
+      "aliases": [
+        "kickstarter"
+      ],
+      "category": "crowdfunding"
+    },
+    {
+      "name": "Gumroad",
+      "url": "https://gumroad.com/",
+      "aliases": [
+        "gumroad"
+      ],
+      "category": "creator"
+    },
+    {
+      "name": "Etsy",
+      "url": "https://www.etsy.com/",
+      "aliases": [
+        "etsy"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Walmart",
+      "url": "https://www.walmart.com/",
+      "aliases": [
+        "walmart"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Target",
+      "url": "https://www.target.com/",
+      "aliases": [
+        "target"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "Best Buy",
+      "url": "https://www.bestbuy.com/",
+      "aliases": [
+        "best buy"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "IKEA",
+      "url": "https://www.ikea.com/",
+      "aliases": [
+        "ikea"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "UNIQLO",
+      "url": "https://www.uniqlo.com/",
+      "aliases": [
+        "uniqlo",
+        "ユニクロ"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "無印良品",
+      "url": "https://www.muji.com/",
+      "aliases": [
+        "muji",
+        "無印"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "ZOZOTOWN",
+      "url": "https://zozo.jp/",
+      "aliases": [
+        "zozo",
+        "ゾゾタウン"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "ヨドバシ.com",
+      "url": "https://www.yodobashi.com/",
+      "aliases": [
+        "yodobashi",
+        "ヨドバシ"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "ビックカメラ",
+      "url": "https://www.biccamera.com/",
+      "aliases": [
+        "biccamera",
+        "ビックカメラ"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "価格.com",
+      "url": "https://kakaku.com/",
+      "aliases": [
+        "kakaku",
+        "価格.com"
+      ],
+      "category": "shopping"
+    },
+    {
+      "name": "PayPay",
+      "url": "https://paypay.ne.jp/",
+      "aliases": [
+        "paypay"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://www.paypal.com/",
+      "aliases": [
+        "paypal"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com/",
+      "aliases": [
+        "stripe"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Coinbase",
+      "url": "https://www.coinbase.com/",
+      "aliases": [
+        "coinbase"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Yahoo! Finance",
+      "url": "https://finance.yahoo.co.jp/",
+      "aliases": [
+        "yahoo finance"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "TradingView",
+      "url": "https://www.tradingview.com/",
+      "aliases": [
+        "tradingview"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Bloomberg",
+      "url": "https://www.bloomberg.com/",
+      "aliases": [
+        "bloomberg"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Investing.com",
+      "url": "https://www.investing.com/",
+      "aliases": [
+        "investing"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Cookpad",
+      "url": "https://cookpad.com/",
+      "aliases": [
+        "cookpad",
+        "クックパッド"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "食べログ",
+      "url": "https://tabelog.com/",
+      "aliases": [
+        "tabelog",
+        "食べログ"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "ぐるなび",
+      "url": "https://www.gnavi.co.jp/",
+      "aliases": [
+        "gnavi",
+        "ぐるなび"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "ホットペッパーグルメ",
+      "url": "https://www.hotpepper.jp/",
+      "aliases": [
+        "hotpepper",
+        "ホットペッパー"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Retty",
+      "url": "https://retty.me/",
+      "aliases": [
+        "retty"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "クラシル",
+      "url": "https://www.kurashiru.com/",
+      "aliases": [
+        "kurashiru"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "DELISH KITCHEN",
+      "url": "https://delishkitchen.tv/",
+      "aliases": [
+        "delish"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Nadia",
+      "url": "https://oceans-nadia.com/",
+      "aliases": [
+        "nadia"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "楽天レシピ",
+      "url": "https://recipe.rakuten.co.jp/",
+      "aliases": [
+        "rakuten recipe"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "macaroni",
+      "url": "https://macaro-ni.jp/",
+      "aliases": [
+        "macaroni"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Allrecipes",
+      "url": "https://www.allrecipes.com/",
+      "aliases": [
+        "allrecipes"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Serious Eats",
+      "url": "https://www.seriouseats.com/",
+      "aliases": [
+        "serious eats"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Tasty",
+      "url": "https://tasty.co/",
+      "aliases": [
+        "tasty"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "OpenTable",
+      "url": "https://www.opentable.com/",
+      "aliases": [
+        "opentable"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Weather.com",
+      "url": "https://weather.com/",
+      "aliases": [
+        "weather"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "気象庁",
+      "url": "https://www.jma.go.jp/",
+      "aliases": [
+        "jma",
+        "気象庁"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "tenki.jp",
+      "url": "https://tenki.jp/",
+      "aliases": [
+        "tenki"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "ウェザーニュース",
+      "url": "https://weathernews.jp/",
+      "aliases": [
+        "weathernews"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "AccuWeather",
+      "url": "https://www.accuweather.com/",
+      "aliases": [
+        "accuweather"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "Windy",
+      "url": "https://www.windy.com/",
+      "aliases": [
+        "windy"
+      ],
+      "category": "weather"
+    },
+    {
+      "name": "Google Earth",
+      "url": "https://earth.google.com/",
+      "aliases": [
+        "google earth"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "Mapion",
+      "url": "https://www.mapion.co.jp/",
+      "aliases": [
+        "mapion"
+      ],
+      "category": "maps"
+    },
+    {
+      "name": "Wiktionary",
+      "url": "https://www.wiktionary.org/",
+      "aliases": [
+        "wiktionary"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "aliases": [
+        "wikidata"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Wikivoyage",
+      "url": "https://www.wikivoyage.org/",
+      "aliases": [
+        "wikivoyage"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Wikisource",
+      "url": "https://wikisource.org/",
+      "aliases": [
+        "wikisource"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Wikiquote",
+      "url": "https://www.wikiquote.org/",
+      "aliases": [
+        "wikiquote"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Fandom",
+      "url": "https://www.fandom.com/",
+      "aliases": [
+        "fandom"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "TV Tropes",
+      "url": "https://tvtropes.org/",
+      "aliases": [
+        "tvtropes"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Know Your Meme",
+      "url": "https://knowyourmeme.com/",
+      "aliases": [
+        "kym"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Urban Dictionary",
+      "url": "https://www.urbandictionary.com/",
+      "aliases": [
+        "urban dictionary"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Britannica",
+      "url": "https://www.britannica.com/",
+      "aliases": [
+        "britannica"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Merriam-Webster",
+      "url": "https://www.merriam-webster.com/",
+      "aliases": [
+        "merriam"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/",
+      "aliases": [
+        "cambridge dictionary"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Dictionary.com",
+      "url": "https://www.dictionary.com/",
+      "aliases": [
+        "dictionary"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Jisho",
+      "url": "https://jisho.org/",
+      "aliases": [
+        "jisho"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "goo辞書",
+      "url": "https://dictionary.goo.ne.jp/",
+      "aliases": [
+        "goo dictionary"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "weblio",
+      "url": "https://www.weblio.jp/",
+      "aliases": [
+        "weblio"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "英辞郎 on the WEB",
+      "url": "https://eow.alc.co.jp/",
+      "aliases": [
+        "eow",
+        "英辞郎"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "Microsoft Translator",
+      "url": "https://www.microsoft.com/translator/",
+      "aliases": [
+        "microsoft translator"
+      ],
+      "category": "translation"
+    },
+    {
+      "name": "NASA",
+      "url": "https://www.nasa.gov/",
+      "aliases": [
+        "nasa"
+      ],
+      "category": "science"
+    },
+    {
+      "name": "ESA",
+      "url": "https://www.esa.int/",
+      "aliases": [
+        "esa"
+      ],
+      "category": "science"
+    },
+    {
+      "name": "NOAA",
+      "url": "https://www.noaa.gov/",
+      "aliases": [
+        "noaa"
+      ],
+      "category": "science"
+    },
+    {
+      "name": "Nature",
+      "url": "https://www.nature.com/",
+      "aliases": [
+        "nature"
+      ],
+      "category": "science"
+    },
+    {
+      "name": "Science",
+      "url": "https://www.science.org/",
+      "aliases": [
+        "science journal"
+      ],
+      "category": "science"
+    },
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "aliases": [
+        "arxiv"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/",
+      "aliases": [
+        "semantic scholar"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "ResearchGate",
+      "url": "https://www.researchgate.net/",
+      "aliases": [
+        "researchgate"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "ORCID",
+      "url": "https://orcid.org/",
+      "aliases": [
+        "orcid"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "aliases": [
+        "pubmed"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "JSTOR",
+      "url": "https://www.jstor.org/",
+      "aliases": [
+        "jstor"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/",
+      "aliases": [
+        "scholar"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "CiNii",
+      "url": "https://cir.nii.ac.jp/",
+      "aliases": [
+        "cinii"
+      ],
+      "category": "research"
+    },
+    {
+      "name": "国立国会図書館",
+      "url": "https://www.ndl.go.jp/",
+      "aliases": [
+        "ndl",
+        "国会図書館"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "青空文庫",
+      "url": "https://www.aozora.gr.jp/",
+      "aliases": [
+        "aozora",
+        "青空文庫"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "BookWalker",
+      "url": "https://bookwalker.jp/",
+      "aliases": [
+        "bookwalker"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "楽天ブックス",
+      "url": "https://books.rakuten.co.jp/",
+      "aliases": [
+        "rakuten books"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "honto",
+      "url": "https://honto.jp/",
+      "aliases": [
+        "honto"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "コミックシーモア",
+      "url": "https://www.cmoa.jp/",
+      "aliases": [
+        "cmoa"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Flickr",
+      "url": "https://www.flickr.com/",
+      "aliases": [
+        "flickr"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "500px",
+      "url": "https://500px.com/",
+      "aliases": [
+        "500px"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/",
+      "aliases": [
+        "deviantart"
+      ],
+      "category": "art"
+    },
+    {
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "aliases": [
+        "openverse"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Flaticon",
+      "url": "https://www.flaticon.com/",
+      "aliases": [
+        "flaticon"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Freepik",
+      "url": "https://www.freepik.com/",
+      "aliases": [
+        "freepik"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Vecteezy",
+      "url": "https://www.vecteezy.com/",
+      "aliases": [
+        "vecteezy"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Icons8",
+      "url": "https://icons8.com/",
+      "aliases": [
+        "icons8"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Lucide",
+      "url": "https://lucide.dev/",
+      "aliases": [
+        "lucide"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Heroicons",
+      "url": "https://heroicons.com/",
+      "aliases": [
+        "heroicons"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Fontshare",
+      "url": "https://www.fontshare.com/",
+      "aliases": [
+        "fontshare"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "DaFont",
+      "url": "https://www.dafont.com/",
+      "aliases": [
+        "dafont"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Font Squirrel",
+      "url": "https://www.fontsquirrel.com/",
+      "aliases": [
+        "font squirrel"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Coolors",
+      "url": "https://coolors.co/",
+      "aliases": [
+        "coolors"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Color Hunt",
+      "url": "https://colorhunt.co/",
+      "aliases": [
+        "color hunt"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Adobe Color",
+      "url": "https://color.adobe.com/",
+      "aliases": [
+        "adobe color"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "CSS Gradient",
+      "url": "https://cssgradient.io/",
+      "aliases": [
+        "css gradient"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Get Waves",
+      "url": "https://getwaves.io/",
+      "aliases": [
+        "getwaves"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Haikei",
+      "url": "https://haikei.app/",
+      "aliases": [
+        "haikei"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "aliases": [
+        "excalidraw"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "draw.io",
+      "url": "https://app.diagrams.net/",
+      "aliases": [
+        "drawio",
+        "diagrams.net"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Lucidchart",
+      "url": "https://www.lucidchart.com/",
+      "aliases": [
+        "lucidchart"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Whimsical",
+      "url": "https://whimsical.com/",
+      "aliases": [
+        "whimsical"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Airtable",
+      "url": "https://www.airtable.com/",
+      "aliases": [
+        "airtable"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Coda",
+      "url": "https://coda.io/",
+      "aliases": [
+        "coda"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md/",
+      "aliases": [
+        "obsidian"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Evernote",
+      "url": "https://evernote.com/",
+      "aliases": [
+        "evernote"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Todoist",
+      "url": "https://todoist.com/",
+      "aliases": [
+        "todoist"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "TickTick",
+      "url": "https://ticktick.com/",
+      "aliases": [
+        "ticktick"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Any.do",
+      "url": "https://www.any.do/",
+      "aliases": [
+        "anydo"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Asana",
+      "url": "https://asana.com/",
+      "aliases": [
+        "asana"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com/",
+      "aliases": [
+        "clickup"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com/",
+      "aliases": [
+        "monday"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "aliases": [
+        "jira"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Confluence",
+      "url": "https://www.atlassian.com/software/confluence",
+      "aliases": [
+        "confluence"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Linear",
+      "url": "https://linear.app/",
+      "aliases": [
+        "linear"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Basecamp",
+      "url": "https://basecamp.com/",
+      "aliases": [
+        "basecamp"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Wrike",
+      "url": "https://www.wrike.com/",
+      "aliases": [
+        "wrike"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Smartsheet",
+      "url": "https://www.smartsheet.com/",
+      "aliases": [
+        "smartsheet"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Zoho",
+      "url": "https://www.zoho.com/",
+      "aliases": [
+        "zoho"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Salesforce",
+      "url": "https://www.salesforce.com/",
+      "aliases": [
+        "salesforce"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "HubSpot",
+      "url": "https://www.hubspot.com/",
+      "aliases": [
+        "hubspot"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Calendly",
+      "url": "https://calendly.com/",
+      "aliases": [
+        "calendly"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Doodle",
+      "url": "https://doodle.com/",
+      "aliases": [
+        "doodle"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Loom",
+      "url": "https://www.loom.com/",
+      "aliases": [
+        "loom"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Miro",
+      "url": "https://miro.com/",
+      "aliases": [
+        "miro"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "FigJam",
+      "url": "https://www.figma.com/figjam/",
+      "aliases": [
+        "figjam"
+      ],
+      "category": "work"
+    },
+    {
+      "name": "Google Forms",
+      "url": "https://forms.google.com/",
+      "aliases": [
+        "google forms",
+        "forms"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Keep",
+      "url": "https://keep.google.com/",
+      "aliases": [
+        "keep"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Google Photos",
+      "url": "https://photos.google.com/",
+      "aliases": [
+        "google photos"
+      ],
+      "category": "photos"
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/",
+      "aliases": [
+        "google news"
+      ],
+      "category": "news"
+    },
+    {
+      "name": "Google Finance",
+      "url": "https://www.google.com/finance/",
+      "aliases": [
+        "google finance"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "Google Flights",
+      "url": "https://www.google.com/travel/flights",
+      "aliases": [
+        "google flights"
+      ],
+      "category": "travel"
+    },
+    {
+      "name": "Google Books",
+      "url": "https://books.google.com/",
+      "aliases": [
+        "google books"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Google Arts & Culture",
+      "url": "https://artsandculture.google.com/",
+      "aliases": [
+        "google arts"
+      ],
+      "category": "art"
+    },
+    {
+      "name": "Google Play",
+      "url": "https://play.google.com/",
+      "aliases": [
+        "google play",
+        "play store"
+      ],
+      "category": "apps"
+    },
+    {
+      "name": "Google Search Console",
+      "url": "https://search.google.com/search-console/",
+      "aliases": [
+        "search console",
+        "gsc"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Google Analytics",
+      "url": "https://analytics.google.com/",
+      "aliases": [
+        "analytics",
+        "ga4"
+      ],
+      "category": "analytics"
+    },
+    {
+      "name": "Google Trends",
+      "url": "https://trends.google.com/",
+      "aliases": [
+        "trends"
+      ],
+      "category": "information"
+    },
+    {
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "aliases": [
+        "google fonts"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Google Developers",
+      "url": "https://developers.google.com/",
+      "aliases": [
+        "google developers"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Google Cloud",
+      "url": "https://cloud.google.com/",
+      "aliases": [
+        "gcp",
+        "google cloud"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "aliases": [
+        "ai studio"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com/",
+      "aliases": [
+        "notebooklm"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/",
+      "aliases": [
+        "openai"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/",
+      "aliases": [
+        "anthropic"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Mistral AI",
+      "url": "https://mistral.ai/",
+      "aliases": [
+        "mistral"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Replicate",
+      "url": "https://replicate.com/",
+      "aliases": [
+        "replicate"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Runway",
+      "url": "https://runwayml.com/",
+      "aliases": [
+        "runway"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io/",
+      "aliases": [
+        "elevenlabs"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Suno",
+      "url": "https://suno.com/",
+      "aliases": [
+        "suno"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Pika",
+      "url": "https://pika.art/",
+      "aliases": [
+        "pika"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai/",
+      "aliases": [
+        "leonardo ai"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Ideogram",
+      "url": "https://ideogram.ai/",
+      "aliases": [
+        "ideogram"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Gamma",
+      "url": "https://gamma.app/",
+      "aliases": [
+        "gamma"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Character.AI",
+      "url": "https://character.ai/",
+      "aliases": [
+        "character ai"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Poe",
+      "url": "https://poe.com/",
+      "aliases": [
+        "poe"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "You.com",
+      "url": "https://you.com/",
+      "aliases": [
+        "you ai"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Phind",
+      "url": "https://www.phind.com/",
+      "aliases": [
+        "phind"
+      ],
+      "category": "ai"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com/",
+      "aliases": [
+        "microsoft"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Microsoft 365",
+      "url": "https://www.microsoft365.com/",
+      "aliases": [
+        "office",
+        "m365"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Word Online",
+      "url": "https://word.cloud.microsoft/",
+      "aliases": [
+        "word"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Excel Online",
+      "url": "https://excel.cloud.microsoft/",
+      "aliases": [
+        "excel"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "PowerPoint Online",
+      "url": "https://powerpoint.cloud.microsoft/",
+      "aliases": [
+        "powerpoint"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "OneNote",
+      "url": "https://www.onenote.com/",
+      "aliases": [
+        "onenote"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/",
+      "aliases": [
+        "microsoft learn"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Azure",
+      "url": "https://azure.microsoft.com/",
+      "aliases": [
+        "azure"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "AWS",
+      "url": "https://aws.amazon.com/",
+      "aliases": [
+        "aws",
+        "amazon web services"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "AWS Console",
+      "url": "https://console.aws.amazon.com/",
+      "aliases": [
+        "aws console"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Azure Portal",
+      "url": "https://portal.azure.com/",
+      "aliases": [
+        "azure portal"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Google Cloud Console",
+      "url": "https://console.cloud.google.com/",
+      "aliases": [
+        "gcp console"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com/",
+      "aliases": [
+        "cloudflare"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Cloudflare Dashboard",
+      "url": "https://dash.cloudflare.com/",
+      "aliases": [
+        "cloudflare dashboard"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Docker",
+      "url": "https://www.docker.com/",
+      "aliases": [
+        "docker"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Docker Hub",
+      "url": "https://hub.docker.com/",
+      "aliases": [
+        "docker hub"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Kubernetes",
+      "url": "https://kubernetes.io/",
+      "aliases": [
+        "k8s",
+        "kubernetes"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Terraform",
+      "url": "https://developer.hashicorp.com/terraform",
+      "aliases": [
+        "terraform"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Ansible",
+      "url": "https://www.ansible.com/",
+      "aliases": [
+        "ansible"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Firebase",
+      "url": "https://firebase.google.com/",
+      "aliases": [
+        "firebase"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Firebase Console",
+      "url": "https://console.firebase.google.com/",
+      "aliases": [
+        "firebase console"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com/",
+      "aliases": [
+        "supabase"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Supabase Dashboard",
+      "url": "https://supabase.com/dashboard",
+      "aliases": [
+        "supabase dashboard"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "MongoDB",
+      "url": "https://www.mongodb.com/",
+      "aliases": [
+        "mongodb"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "MongoDB Atlas",
+      "url": "https://www.mongodb.com/atlas",
+      "aliases": [
+        "mongodb atlas"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "PostgreSQL",
+      "url": "https://www.postgresql.org/",
+      "aliases": [
+        "postgresql",
+        "postgres"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "MySQL",
+      "url": "https://www.mysql.com/",
+      "aliases": [
+        "mysql"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Redis",
+      "url": "https://redis.io/",
+      "aliases": [
+        "redis"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "SQLite",
+      "url": "https://www.sqlite.org/",
+      "aliases": [
+        "sqlite"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "MariaDB",
+      "url": "https://mariadb.org/",
+      "aliases": [
+        "mariadb"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Prisma",
+      "url": "https://www.prisma.io/",
+      "aliases": [
+        "prisma"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "PlanetScale",
+      "url": "https://planetscale.com/",
+      "aliases": [
+        "planetscale"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Neon",
+      "url": "https://neon.tech/",
+      "aliases": [
+        "neon"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Turso",
+      "url": "https://turso.tech/",
+      "aliases": [
+        "turso"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Upstash",
+      "url": "https://upstash.com/",
+      "aliases": [
+        "upstash"
+      ],
+      "category": "database"
+    },
+    {
+      "name": "Vultr",
+      "url": "https://www.vultr.com/",
+      "aliases": [
+        "vultr"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "DigitalOcean",
+      "url": "https://www.digitalocean.com/",
+      "aliases": [
+        "digitalocean"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Linode",
+      "url": "https://www.linode.com/",
+      "aliases": [
+        "linode"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Hetzner",
+      "url": "https://www.hetzner.com/",
+      "aliases": [
+        "hetzner"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "OVHcloud",
+      "url": "https://www.ovhcloud.com/",
+      "aliases": [
+        "ovh"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Oracle Cloud",
+      "url": "https://www.oracle.com/cloud/",
+      "aliases": [
+        "oracle cloud"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "IBM Cloud",
+      "url": "https://www.ibm.com/cloud",
+      "aliases": [
+        "ibm cloud"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Alibaba Cloud",
+      "url": "https://www.alibabacloud.com/",
+      "aliases": [
+        "alibaba cloud"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Tencent Cloud",
+      "url": "https://www.tencentcloud.com/",
+      "aliases": [
+        "tencent cloud"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Railway",
+      "url": "https://railway.com/",
+      "aliases": [
+        "railway"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Render",
+      "url": "https://render.com/",
+      "aliases": [
+        "render"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Heroku",
+      "url": "https://www.heroku.com/",
+      "aliases": [
+        "heroku"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "Fly.io",
+      "url": "https://fly.io/",
+      "aliases": [
+        "fly"
+      ],
+      "category": "cloud"
+    },
+    {
+      "name": "GitHub Codespaces",
+      "url": "https://github.com/features/codespaces",
+      "aliases": [
+        "codespaces"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "GitHub Actions",
+      "url": "https://github.com/features/actions",
+      "aliases": [
+        "github actions"
+      ],
+      "category": "automation"
+    },
+    {
+      "name": "GitHub Docs",
+      "url": "https://docs.github.com/",
+      "aliases": [
+        "github docs"
+      ],
+      "category": "documentation"
+    },
+    {
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending",
+      "aliases": [
+        "github trending"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "GitHub Marketplace",
+      "url": "https://github.com/marketplace",
+      "aliases": [
+        "github marketplace"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "GitLab Docs",
+      "url": "https://docs.gitlab.com/",
+      "aliases": [
+        "gitlab docs"
+      ],
+      "category": "documentation"
+    },
+    {
+      "name": "Postman",
+      "url": "https://www.postman.com/",
+      "aliases": [
+        "postman"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Hoppscotch",
+      "url": "https://hoppscotch.io/",
+      "aliases": [
+        "hoppscotch"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Insomnia",
+      "url": "https://insomnia.rest/",
+      "aliases": [
+        "insomnia"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Swagger",
+      "url": "https://swagger.io/",
+      "aliases": [
+        "swagger"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "OpenAPI",
+      "url": "https://www.openapis.org/",
+      "aliases": [
+        "openapi"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Regex101",
+      "url": "https://regex101.com/",
+      "aliases": [
+        "regex101",
+        "regex"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "JSONLint",
+      "url": "https://jsonlint.com/",
+      "aliases": [
+        "jsonlint"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "JSON Formatter",
+      "url": "https://jsonformatter.org/",
+      "aliases": [
+        "json formatter"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "JWT.io",
+      "url": "https://jwt.io/",
+      "aliases": [
+        "jwt"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Base64 Guru",
+      "url": "https://base64.guru/",
+      "aliases": [
+        "base64"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "DevDocs",
+      "url": "https://devdocs.io/",
+      "aliases": [
+        "devdocs"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Can I Use",
+      "url": "https://caniuse.com/",
+      "aliases": [
+        "caniuse"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "HTTPBin",
+      "url": "https://httpbin.org/",
+      "aliases": [
+        "httpbin"
+      ],
+      "category": "development"
+    },
+    {
+      "name": "Random.org",
+      "url": "https://www.random.org/",
+      "aliases": [
+        "random"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Time.is",
+      "url": "https://time.is/",
+      "aliases": [
+        "time"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Calculator.net",
+      "url": "https://www.calculator.net/",
+      "aliases": [
+        "calculator"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "UnitConverters",
+      "url": "https://www.unitconverters.net/",
+      "aliases": [
+        "unit converter"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "CloudConvert",
+      "url": "https://cloudconvert.com/",
+      "aliases": [
+        "cloudconvert"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Convertio",
+      "url": "https://convertio.co/",
+      "aliases": [
+        "convertio"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "iLovePDF",
+      "url": "https://www.ilovepdf.com/",
+      "aliases": [
+        "ilovepdf"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Smallpdf",
+      "url": "https://smallpdf.com/",
+      "aliases": [
+        "smallpdf"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "PDF24",
+      "url": "https://tools.pdf24.org/",
+      "aliases": [
+        "pdf24"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "TinyURL",
+      "url": "https://tinyurl.com/",
+      "aliases": [
+        "tinyurl"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Bitly",
+      "url": "https://bitly.com/",
+      "aliases": [
+        "bitly"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "QR Code Generator",
+      "url": "https://www.qr-code-generator.com/",
+      "aliases": [
+        "qr",
+        "qrcode"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Squoosh",
+      "url": "https://squoosh.app/",
+      "aliases": [
+        "squoosh"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "TinyPNG",
+      "url": "https://tinypng.com/",
+      "aliases": [
+        "tinypng"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Remove.bg",
+      "url": "https://www.remove.bg/",
+      "aliases": [
+        "removebg"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Photopea",
+      "url": "https://www.photopea.com/",
+      "aliases": [
+        "photopea"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "GIMP",
+      "url": "https://www.gimp.org/",
+      "aliases": [
+        "gimp"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Inkscape",
+      "url": "https://inkscape.org/",
+      "aliases": [
+        "inkscape"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Blender",
+      "url": "https://www.blender.org/",
+      "aliases": [
+        "blender"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "Krita",
+      "url": "https://krita.org/",
+      "aliases": [
+        "krita"
+      ],
+      "category": "art"
+    },
+    {
+      "name": "DaVinci Resolve",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "aliases": [
+        "davinci",
+        "resolve"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "OBS",
+      "url": "https://obsproject.com/",
+      "aliases": [
+        "obs",
+        "obs studio"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "FFmpeg",
+      "url": "https://ffmpeg.org/",
+      "aliases": [
+        "ffmpeg"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "aliases": [
+        "audacity"
+      ],
+      "category": "music"
+    },
+    {
+      "name": "VLC",
+      "url": "https://www.videolan.org/vlc/",
+      "aliases": [
+        "vlc"
+      ],
+      "category": "video"
+    },
+    {
+      "name": "Firefox",
+      "url": "https://www.mozilla.org/firefox/",
+      "aliases": [
+        "firefox"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Chrome",
+      "url": "https://www.google.com/chrome/",
+      "aliases": [
+        "chrome",
+        "google chrome"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Microsoft Edge",
+      "url": "https://www.microsoft.com/edge/",
+      "aliases": [
+        "edge"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Opera",
+      "url": "https://www.opera.com/",
+      "aliases": [
+        "opera"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Brave",
+      "url": "https://brave.com/",
+      "aliases": [
+        "brave browser"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Vivaldi",
+      "url": "https://vivaldi.com/",
+      "aliases": [
+        "vivaldi"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Tor Project",
+      "url": "https://www.torproject.org/",
+      "aliases": [
+        "tor"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Signal",
+      "url": "https://signal.org/",
+      "aliases": [
+        "signal"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://telegram.org/",
+      "aliases": [
+        "telegram"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "WhatsApp",
+      "url": "https://www.whatsapp.com/",
+      "aliases": [
+        "whatsapp"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Snapchat",
+      "url": "https://www.snapchat.com/",
+      "aliases": [
+        "snapchat"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "Imgur",
+      "url": "https://imgur.com/",
+      "aliases": [
+        "imgur"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "GIPHY",
+      "url": "https://giphy.com/",
+      "aliases": [
+        "giphy"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Tenor",
+      "url": "https://tenor.com/",
+      "aliases": [
+        "tenor"
+      ],
+      "category": "images"
+    },
+    {
+      "name": "Shodan",
+      "url": "https://www.shodan.io/",
+      "aliases": [
+        "shodan"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "VirusTotal",
+      "url": "https://www.virustotal.com/",
+      "aliases": [
+        "virustotal"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Have I Been Pwned",
+      "url": "https://haveibeenpwned.com/",
+      "aliases": [
+        "hibp",
+        "pwned"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Bitwarden",
+      "url": "https://bitwarden.com/",
+      "aliases": [
+        "bitwarden"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "1Password",
+      "url": "https://1password.com/",
+      "aliases": [
+        "1password"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Proton",
+      "url": "https://proton.me/",
+      "aliases": [
+        "proton"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Proton VPN",
+      "url": "https://protonvpn.com/",
+      "aliases": [
+        "proton vpn"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Mullvad",
+      "url": "https://mullvad.net/",
+      "aliases": [
+        "mullvad"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "NordVPN",
+      "url": "https://nordvpn.com/",
+      "aliases": [
+        "nordvpn"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "OWASP",
+      "url": "https://owasp.org/",
+      "aliases": [
+        "owasp"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Snyk",
+      "url": "https://snyk.io/",
+      "aliases": [
+        "snyk"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Let's Encrypt",
+      "url": "https://letsencrypt.org/",
+      "aliases": [
+        "letsencrypt"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "EFF",
+      "url": "https://www.eff.org/",
+      "aliases": [
+        "eff"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Privacy Guides",
+      "url": "https://www.privacyguides.org/",
+      "aliases": [
+        "privacy guides"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "UptimeRobot",
+      "url": "https://uptimerobot.com/",
+      "aliases": [
+        "uptimerobot"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "Pingdom",
+      "url": "https://www.pingdom.com/",
+      "aliases": [
+        "pingdom"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "Sentry",
+      "url": "https://sentry.io/",
+      "aliases": [
+        "sentry"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "Datadog",
+      "url": "https://www.datadoghq.com/",
+      "aliases": [
+        "datadog"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "Grafana",
+      "url": "https://grafana.com/",
+      "aliases": [
+        "grafana"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "Prometheus",
+      "url": "https://prometheus.io/",
+      "aliases": [
+        "prometheus"
+      ],
+      "category": "monitoring"
+    },
+    {
+      "name": "OpenAI Status",
+      "url": "https://status.openai.com/",
+      "aliases": [
+        "openai status"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "GitHub Status",
+      "url": "https://www.githubstatus.com/",
+      "aliases": [
+        "github status"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "Cloudflare Status",
+      "url": "https://www.cloudflarestatus.com/",
+      "aliases": [
+        "cloudflare status"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "Discord Status",
+      "url": "https://discordstatus.com/",
+      "aliases": [
+        "discord status"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "Slack Status",
+      "url": "https://slack-status.com/",
+      "aliases": [
+        "slack status"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "DownDetector",
+      "url": "https://downdetector.com/",
+      "aliases": [
+        "downdetector"
+      ],
+      "category": "status"
+    },
+    {
+      "name": "Speedtest",
+      "url": "https://www.speedtest.net/",
+      "aliases": [
+        "speedtest"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Fast.com",
+      "url": "https://fast.com/",
+      "aliases": [
+        "fast"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "DNS Checker",
+      "url": "https://dnschecker.org/",
+      "aliases": [
+        "dns checker"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "IPinfo",
+      "url": "https://ipinfo.io/",
+      "aliases": [
+        "ipinfo"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "BrowserLeaks",
+      "url": "https://browserleaks.com/",
+      "aliases": [
+        "browser leaks"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "Mozilla",
+      "url": "https://www.mozilla.org/",
+      "aliases": [
+        "mozilla"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Apple",
+      "url": "https://www.apple.com/",
+      "aliases": [
+        "apple"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Sony",
+      "url": "https://www.sony.com/",
+      "aliases": [
+        "sony"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "Nintendo",
+      "url": "https://www.nintendo.com/",
+      "aliases": [
+        "nintendo"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "PlayStation",
+      "url": "https://www.playstation.com/",
+      "aliases": [
+        "playstation",
+        "ps"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Xbox",
+      "url": "https://www.xbox.com/",
+      "aliases": [
+        "xbox"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "EA",
+      "url": "https://www.ea.com/",
+      "aliases": [
+        "ea",
+        "electronic arts"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Ubisoft",
+      "url": "https://www.ubisoft.com/",
+      "aliases": [
+        "ubisoft"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Rockstar Games",
+      "url": "https://www.rockstargames.com/",
+      "aliases": [
+        "rockstar"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Riot Games",
+      "url": "https://www.riotgames.com/",
+      "aliases": [
+        "riot"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Blizzard",
+      "url": "https://www.blizzard.com/",
+      "aliases": [
+        "blizzard"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Bethesda",
+      "url": "https://bethesda.net/",
+      "aliases": [
+        "bethesda"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Capcom",
+      "url": "https://www.capcom-games.com/",
+      "aliases": [
+        "capcom"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Square Enix",
+      "url": "https://www.square-enix-games.com/",
+      "aliases": [
+        "square enix"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "SEGA",
+      "url": "https://www.sega.com/",
+      "aliases": [
+        "sega"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Bandai Namco",
+      "url": "https://www.bandainamcoent.com/",
+      "aliases": [
+        "bandai namco"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Konami",
+      "url": "https://www.konami.com/",
+      "aliases": [
+        "konami"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Koei Tecmo",
+      "url": "https://www.koeitecmo.co.jp/",
+      "aliases": [
+        "koei tecmo"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "FromSoftware",
+      "url": "https://www.fromsoftware.jp/",
+      "aliases": [
+        "fromsoftware"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Supercell",
+      "url": "https://supercell.com/",
+      "aliases": [
+        "supercell"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Pokémon",
+      "url": "https://www.pokemon.com/",
+      "aliases": [
+        "pokemon",
+        "ポケモン"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Fortnite",
+      "url": "https://www.fortnite.com/",
+      "aliases": [
+        "fortnite"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "League of Legends",
+      "url": "https://www.leagueoflegends.com/",
+      "aliases": [
+        "lol",
+        "league"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Valorant",
+      "url": "https://playvalorant.com/",
+      "aliases": [
+        "valorant"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Overwatch",
+      "url": "https://overwatch.blizzard.com/",
+      "aliases": [
+        "overwatch"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "GOG",
+      "url": "https://www.gog.com/",
+      "aliases": [
+        "gog"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Humble Bundle",
+      "url": "https://www.humblebundle.com/",
+      "aliases": [
+        "humble bundle"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "GameFAQs",
+      "url": "https://gamefaqs.gamespot.com/",
+      "aliases": [
+        "gamefaqs"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "PC Gaming Wiki",
+      "url": "https://www.pcgamingwiki.com/",
+      "aliases": [
+        "pc gaming wiki"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "ProtonDB",
+      "url": "https://www.protondb.com/",
+      "aliases": [
+        "protondb"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "CurseForge",
+      "url": "https://www.curseforge.com/",
+      "aliases": [
+        "curseforge"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Modrinth",
+      "url": "https://modrinth.com/",
+      "aliases": [
+        "modrinth"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Planet Minecraft",
+      "url": "https://www.planetminecraft.com/",
+      "aliases": [
+        "planet minecraft"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Chess.com",
+      "url": "https://www.chess.com/",
+      "aliases": [
+        "chess"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Lichess",
+      "url": "https://lichess.org/",
+      "aliases": [
+        "lichess"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "GeoGuessr",
+      "url": "https://www.geoguessr.com/",
+      "aliases": [
+        "geoguessr"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Sporcle",
+      "url": "https://www.sporcle.com/",
+      "aliases": [
+        "sporcle"
+      ],
+      "category": "games"
+    },
+    {
+      "name": "Kahoot!",
+      "url": "https://kahoot.com/",
+      "aliases": [
+        "kahoot"
+      ],
+      "category": "education"
+    },
+    {
+      "name": "Quizizz",
+      "url": "https://quizizz.com/",
+      "aliases": [
+        "quizizz"
+      ],
+      "category": "education"
+    },
+    {
+      "name": "Scratch",
+      "url": "https://scratch.mit.edu/",
+      "aliases": [
+        "scratch"
+      ],
+      "category": "education"
+    },
+    {
+      "name": "Code.org",
+      "url": "https://code.org/",
+      "aliases": [
+        "code.org"
+      ],
+      "category": "education"
+    },
+    {
+      "name": "TypingClub",
+      "url": "https://www.typingclub.com/",
+      "aliases": [
+        "typingclub"
+      ],
+      "category": "education"
+    },
+    {
+      "name": "Monkeytype",
+      "url": "https://monkeytype.com/",
+      "aliases": [
+        "monkeytype"
+      ],
+      "category": "tools"
+    },
+    {
+      "name": "Desmos",
+      "url": "https://www.desmos.com/",
+      "aliases": [
+        "desmos"
+      ],
+      "category": "education"
+    }
+  ]
+}
