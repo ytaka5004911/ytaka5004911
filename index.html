@@ -33,6 +33,6 @@
     </ul>
   </nav>
 </main>
- <script>var sites=[];function onData(x){sites=x}if(typeof fetch==="function"){fetch("/ytaka5004911/sites.json").then(function(r){return r.json()}).then(onData)}else{var xhr=new XMLHttpRequest();xhr.open("GET","/ytaka5004911/sites.json",true);xhr.onreadystatechange=function(){if(xhr.readyState===4&&xhr.status===200)onData(JSON.parse(xhr.responseText))};xhr.send()}function go(){var q=document.getElementById("search").value.toLowerCase();var hit=sites.filter(function(s){return s.name.toLowerCase()===q||(s.aliases||[]).some(function(a){return a.toLowerCase()===q})})[0];if(hit)location.href=hit.url}</script>
+ <script>var sites=[];function onData(x){sites=x.sites}if(typeof fetch==="function"){fetch("/ytaka5004911/sites.json").then(function(r){return r.json()}).then(onData)}else{var xhr=new XMLHttpRequest();xhr.open("GET","/ytaka5004911/sites.json",true);xhr.onreadystatechange=function(){if(xhr.readyState===4&&xhr.status===200)onData(JSON.parse(xhr.responseText))};xhr.send()}function go(){var q=document.getElementById("search").value.toLowerCase();var hit=sites.filter(function(s){return s.name.toLowerCase()===q||(s.aliases||[]).some(function(a){return a.toLowerCase()===q})})[0];if(hit)location.href=hit.url}</script>
  </body>
 </html>
