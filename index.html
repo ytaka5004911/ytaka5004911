@@ -23,7 +23,7 @@
     <input type="hidden" name="hl" value="ja">
     <button aria-label="検索する" type="submit">Googleで検索</button>
     <button aria-label="AI検索する" type="submit" name="udm" value="50">AI検索</button>
-    <button aria-label="URLに転送する" type="button" onclick="var i=document.getElementById('search'),v=i&&i.value.trim();if(v){try{if(!/^[a-z][a-z0-9+.-]*:\/\//i.test(v))v='https://'+v;var u=new URL(v);if(u.protocol==='http:'||u.protocol==='https:')window.open(u.href,'_blank')}catch(e){}}">URLに転送する</button>
+    <button aria-label="URLに転送する" type="button" onclick="var v=document.getElementById('search').value.trim();if(v){if(v.indexOf('://')===-1)v='https://'+v;if(v.indexOf('.')!==-1)location.href=v;}">URLに転送する</button>
     <button aria-label="サービス名で検索する" type="button" onclick="go()">サービス名で検索する</button>
   </form>
   <nav aria-label="リンク" itemscope itemtype="https://schema.org/SiteNavigationElement">
