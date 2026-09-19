@@ -11,13 +11,11 @@
   <style>main{display:block;}a{display:inline-block;padding:12px 0;}p{margin:12px 0;}</style>
   <script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('/ytaka5004911/sw.js').then(function(r){r.update()})['catch'](console.error);});</script>                                                                                        
 </head>
-<body itemscope itemtype="https://schema.org/WebSite">
- <meta itemprop="name" content="ホームページ">
+<body>
  <main>
-  <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction" role="search" action="https://www.google.com/search" method="get" target="_blank">
+  <form role="search" action="https://www.google.com/search" method="get" target="_blank">
     <label for="search">Googleで検索する</label>
-    <meta itemprop="target" content="https://www.google.com/search?q={search_term_string}"> 
-    <input itemprop="query-input" aria-label="Googleで検索する内容" enterkeyhint="search" inputmode="search" id="search" autocapitalize="off" spellcheck="false" autocomplete="off" autocorrect="off" placeholder="Googleで検索します..." required type="text" name="q" writingsuggestions="false" translate="no">
+    <input aria-label="Googleで検索する内容" enterkeyhint="search" inputmode="search" id="search" autocapitalize="off" spellcheck="false" autocomplete="off" autocorrect="off" placeholder="Googleで検索します..." required type="text" name="q" writingsuggestions="false" translate="no">
     <input type="hidden" name="ie" value="UTF-8">
     <input type="hidden" name="oe" value="UTF-8">
     <input type="hidden" name="hl" value="ja">
@@ -26,10 +24,10 @@
     <button aria-label="URLに転送する" type="button" onclick="var v=document.getElementById('search').value.trim();if(v){if(v.indexOf('://')===-1)v='https://'+v;if(v.indexOf('.')!==-1)location.href=v;}">URLに転送する</button>
     <button aria-label="サービス名で検索する" id="service_btn" type="button" onclick="go()">サービス名で検索する</button>
   </form>
-  <nav aria-label="リンク" itemscope itemtype="https://schema.org/SiteNavigationElement">
+  <nav aria-label="リンク">
     <ul>
-      <li><a itemprop="url" href="https://ytaka5004911.github.io/ytaka5004911/colorMix.html">色調合</a></li>
-      <li><a itemprop="url" href="https://ytaka5004911.github.io/MedChartLite/index.html">MedChartLite</a></li>
+      <li><a href="https://ytaka5004911.github.io/ytaka5004911/colorMix.html">色調合</a></li>
+      <li><a href="https://ytaka5004911.github.io/MedChartLite/index.html">MedChartLite</a></li>
     </ul>
   </nav>
 </main>
