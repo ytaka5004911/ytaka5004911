@@ -20,7 +20,7 @@
     <input type="hidden" name="hl" value="ja">
     <button aria-label="検索する" type="submit">Googleで検索</button>
     <button aria-label="AI検索する" type="submit" name="udm" value="50">AI検索</button>
-    <button aria-label="URLに転送する" type="button" onclick="var v=document.getElementById('search').value.trim();if(v){if(v.indexOf('://')===-1)v='https://'+v;if(v.indexOf('.')!==-1)location.href=v;}">URLに転送する</button>
+    <button aria-label="URLに転送する" type="button" onclick="gourl()">URLに転送する</button>
     <button aria-label="サービス名で検索する" id="service_btn" type="button" onclick="go()">サービス名で検索する</button>
   </form>
   <nav aria-label="リンク">
@@ -30,6 +30,6 @@
     </ul>
   </nav>
 </main>
- <script>(function(){var sites=[];function noFile(){if(typeof console!=="undefined"&&typeof console.warn==="function"){console.warn("[Warning] Some features are disabled in this environment.");}const e=document.getElementById("service_btn");if(e){e.style.display="none";e.ariaHidden="true";e.hidden=true;}}function onData(x){sites=x.sites}if(typeof fetch==="function"){fetch("/ytaka5004911/sites.json").then(function(r){if(!r.ok){noFile();return;};return r.json()}).then(function(data){if(data){onData(data);}})['catch'](function(){noFile()});}else if(typeof fetch!=="function"&&typeof XMLHttpRequest==="undefined"){noFile()}else{var xhr=new XMLHttpRequest();xhr.open("GET","/ytaka5004911/sites.json",true);xhr.onreadystatechange=function(){if(xhr.readyState===4){if(xhr.status===200){onData(JSON.parse(xhr.responseText))}else{noFile()}}};xhr.send()}function go(){var q=document.getElementById("search").value.trim().toLowerCase();var hit=sites.filter(function(s){return s.name.toLowerCase()===q||(s.aliases||[]).some(function(a){return a.toLowerCase()===q})})[0];if(hit)location.href=hit.url}window.go = go;})();</script>
+ <script>(function(){function gourl(){var v=document.getElementById('search').value.trim();if(v){if(v.indexOf('://')===-1)v='https://'+v;if(v.indexOf('.')!==-1)location.href=v;}}var sites=[];function noFile(){if(typeof console!=="undefined"&&typeof console.warn==="function"){console.warn("[Warning] Some features are disabled in this environment.");}const e=document.getElementById("service_btn");if(e){e.style.display="none";e.ariaHidden="true";e.hidden=true;}}function onData(x){sites=x.sites}if(typeof fetch==="function"){fetch("/ytaka5004911/sites.json").then(function(r){if(!r.ok){noFile();return;};return r.json()}).then(function(data){if(data){onData(data);}})['catch'](function(){noFile()});}else if(typeof fetch!=="function"&&typeof XMLHttpRequest==="undefined"){noFile()}else{var xhr=new XMLHttpRequest();xhr.open("GET","/ytaka5004911/sites.json",true);xhr.onreadystatechange=function(){if(xhr.readyState===4){if(xhr.status===200){onData(JSON.parse(xhr.responseText))}else{noFile()}}};xhr.send()}function go(){var q=document.getElementById("search").value.trim().toLowerCase();var hit=sites.filter(function(s){return s.name.toLowerCase()===q||(s.aliases||[]).some(function(a){return a.toLowerCase()===q})})[0];if(hit)location.href=hit.url}window.go = go;})();</script>
  </body>
 </html>
