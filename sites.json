@@ -17,7 +17,7 @@
       "url": "https://mail.google.com/",
       "aliases": [
         "gmail",
-        "google mail",
+        "googlemail",
         "ジーメール"
       ],
       "category": "mail"
@@ -36,8 +36,7 @@
       "name": "GitHub",
       "url": "https://github.com/",
       "aliases": [
-        "github",
-        "git hub"
+        "github"
       ],
       "category": "development"
     },
@@ -66,7 +65,7 @@
       "aliases": [
         "copilot",
         "cooilot",
-        "microsoft copilot"
+        "microsoftcopilot"
       ],
       "category": "ai"
     },
@@ -75,7 +74,6 @@
       "url": "https://chatgpt.com/",
       "aliases": [
         "chatgpt",
-        "chat gpt",
         "gpt"
       ],
       "category": "ai"
