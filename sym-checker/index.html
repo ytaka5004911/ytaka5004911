@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>からだの相談チャット</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-900:#0E3B33;
+    --teal-700:#155E51;
+    --teal-500:#2C8172;
+    --sage-300:#BFD6C7;
+    --sage-100:#EAF1EC;
+    --paper:#F6F7F5;
+    --card:#FFFFFF;
+    --ink:#1E2422;
+    --ink-soft:#5B655F;
+    --line:#DCE4DF;
+    --alert:#B23A2E;
+    --alert-bg:#FBEAE7;
+    --warn:#B98A1E;
+    --warn-bg:#FBF3DF;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    font-family:"Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--teal-900);
+    color:#fff;
+    padding:22px 20px 18px;
+    position:relative;
+  }
+  header .inner{
+    max-width:760px;
+    margin:0 auto;
+  }
+  header h1{
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.02em;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  header h1 .mark{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--sage-300);
+    display:inline-block;
+  }
+  header p{
+    margin:6px 0 0;
+    font-size:13px;
+    color:var(--sage-300);
+    font-weight:400;
+  }
+
+  .disclaimer{
+    background:var(--warn-bg);
+    border-bottom:1px solid #EAD9A8;
+    color:#6B5215;
+    font-size:12.5px;
+    line-height:1.6;
+    padding:10px 20px;
+  }
+  .disclaimer .inner{max-width:760px;margin:0 auto;}
+  .disclaimer b{font-weight:700;}
+  .disclaimer .emergency-line{
+    display:block;
+    margin-top:2px;
+    font-weight:700;
+    color:var(--alert);
+  }
+
+  /* ---------- Chat area ---------- */
+  main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    overflow:hidden;
+  }
+  #chat-wrap{
+    width:100%;
+    max-width:760px;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  #log{
+    flex:1;
+    overflow-y:auto;
+    padding:20px 16px 10px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .msg{
+    display:flex;
+    max-width:88%;
+  }
+  .msg.bot{align-self:flex-start;}
+  .msg.user{align-self:flex-end;}
+  .bubble{
+    padding:12px 15px;
+    border-radius:14px;
+    font-size:14.5px;
+    line-height:1.7;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+  .msg.bot .bubble{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top-left-radius:4px;
+    color:var(--ink);
+  }
+  .msg.user .bubble{
+    background:var(--teal-700);
+    color:#fff;
+    border-top-right-radius:4px;
+  }
+  .msg.bot .bubble.emergency{
+    background:var(--alert-bg);
+    border:1px solid #E3B7AF;
+    color:var(--alert);
+    font-weight:700;
+  }
+  .msg.bot .bubble.care{
+    background:var(--sage-100);
+    border:1px solid var(--sage-300);
+  }
+  .tag-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:8px;
+  }
+  .tag{
+    font-size:11.5px;
+    padding:3px 9px;
+    border-radius:999px;
+    background:var(--sage-100);
+    color:var(--teal-700);
+    border:1px solid var(--sage-300);
+  }
+
+  /* ---------- quick chips ---------- */
+  #chips{
+    padding:6px 16px 0;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+  }
+  #chips button{
+    flex:none;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--teal-700);
+    border-radius:999px;
+    padding:7px 13px;
+    font-size:12.5px;
+    font-family:inherit;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  #chips button:hover{background:var(--sage-100);}
+
+  /* ---------- input bar ---------- */
+  #input-bar{
+    display:flex;
+    gap:8px;
+    padding:12px 16px 16px;
+    border-top:1px solid var(--line);
+    background:var(--paper);
+  }
+  #text-input{
+    flex:1;
+    resize:none;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:11px 13px;
+    font-size:14.5px;
+    font-family:inherit;
+    background:var(--card);
+    color:var(--ink);
+    line-height:1.5;
+    max-height:110px;
+  }
+  #text-input:focus{outline:2px solid var(--teal-500); outline-offset:1px;}
+  #send-btn{
+    background:var(--teal-700);
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:0 18px;
+    font-size:14px;
+    font-weight:700;
+    font-family:inherit;
+    cursor:pointer;
+  }
+  #send-btn:disabled{opacity:.5;cursor:default;}
+  #send-btn:hover:not(:disabled){background:var(--teal-900);}
+
+  #reset-row{
+    text-align:center;
+    padding:0 16px 10px;
+  }
+  #reset-row button{
+    background:none;
+    border:none;
+    color:var(--ink-soft);
+    font-size:12px;
+    font-family:inherit;
+    text-decoration:underline;
+    cursor:pointer;
+    padding:4px;
+  }
+
+  footer{
+    text-align:center;
+    font-size:11px;
+    color:var(--ink-soft);
+    padding:6px 16px 14px;
+    background:var(--paper);
+  }
+  footer button.about-btn{
+    background:none;border:none;color:var(--teal-700);
+    text-decoration:underline;cursor:pointer;font-size:11px;font-family:inherit;
+  }
+  #about-panel{
+    display:none;
+    max-width:760px;
+    margin:0 auto 10px;
+    padding:12px 16px;
+    background:var(--sage-100);
+    border:1px solid var(--sage-300);
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.7;
+    color:var(--teal-900);
+  }
+
+  @media (max-width:480px){
+    header{padding:18px 14px 14px;}
+    header h1{font-size:19px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1><span class="mark"></span>からだの相談チャット</h1>
+    <p>今の症状と、いつからかを話しかけるように入力してください。あとから症状を追加することもできます。</p>
+  </div>
+</header>
+
+<div class="disclaimer">
+  <div class="inner">
+    これは医療診断ではなく、症状の整理と受診の目安をお伝えするためのものです。<b>必ず医師の診察に代わるものではありません。</b>
+    <span class="emergency-line">⚠ 意識がない・呼吸が苦しい・激しい胸の痛みなど命に関わる症状があれば、今すぐ119番へ連絡するか救急外来を受診してください。</span>
+  </div>
+</div>
+
+<main>
+  <div id="chat-wrap">
+    <div id="log"></div>
+
+    <div id="chips"></div>
+
+    <div id="input-bar">
+      <textarea id="text-input" rows="1" placeholder="例）3日前から頭が痛くて、少し熱っぽいです"></textarea>
+      <button id="send-btn">送信</button>
+    </div>
+    <div id="reset-row">
+      <button id="reset-btn">はじめからやり直す</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  症状の言葉を単語ごとに読み取って会話します。<button class="about-btn" id="about-toggle">語彙の仕組みについて</button>
+  <div id="about-panel"></div>
+</footer>
+
+<script>
+/* =========================================================
+   1. 語彙データの読み込み
+   語彙は vocab.json にまとめてあります。ブラウザで直接
+   index.html を開いた場合（file://）は fetch がブロックされる
+   ことがあるため、その場合は下の <script id="vocab-fallback">
+   に埋め込まれた同じ内容を使います。
+   ========================================================= */
+
+let BODY_GROUPS = [];
+let SYMPTOM_GROUPS = [];
+let INTENSITY_WORDS = [];
+let FREQUENCY_WORDS = [];
+let TIME_WORDS = [];
+let URGENT_INTENSITY_WORDS = [];
+let RED_FLAGS = [];
+let SELF_HARM_WORDS = [];
+let FINISH_WORDS = [];
+
+const TIME_REGEX = /([0-9０-９]+)\s*(分|時間|日|週間|週|ヶ月|か月|カ月|ヵ月|月|年)(前|くらい前|ほど前|ぐらい前)?/g;
+
+let bodyWordCount = 0;
+let symptomWordCount = 0;
+let modifierWordCount = 0;
+let timeWordCount = 0;
+let combinationCount = 0;
+
+function formatNumber(n){ return n.toLocaleString("ja-JP"); }
+
+function applyVocab(data){
+  BODY_GROUPS = data.bodyGroups;
+  SYMPTOM_GROUPS = data.symptomGroups;
+  INTENSITY_WORDS = data.intensityWords;
+  FREQUENCY_WORDS = data.frequencyWords;
+  TIME_WORDS = data.timeWords;
+  URGENT_INTENSITY_WORDS = data.urgentIntensityWords;
+  RED_FLAGS = data.redFlags;
+  SELF_HARM_WORDS = data.selfHarmWords;
+  FINISH_WORDS = data.finishWords;
+
+  bodyWordCount = BODY_GROUPS.reduce((n,g)=>n+g.items.length,0);
+  symptomWordCount = SYMPTOM_GROUPS.reduce((n,g)=>n+g.items.length,0);
+  modifierWordCount = INTENSITY_WORDS.length + FREQUENCY_WORDS.length;
+  timeWordCount = TIME_WORDS.length;
+  combinationCount = bodyWordCount * symptomWordCount * modifierWordCount * timeWordCount;
+}
+
+async function loadVocab(){
+  try{
+    const res = await fetch("vocab.json", { cache:"no-store" });
+    if(!res.ok) throw new Error("vocab.json not reachable");
+    return await res.json();
+  }catch(e){
+    const el = document.getElementById("vocab-fallback");
+    return JSON.parse(el.textContent);
+  }
+}
+
+/* =========================================================
+   2. 単語単位でのテキスト解析
+   ========================================================= */
+
+function findMatches(text, groups, key){
+  // 長い語から先に照合し、重複しないように部分一致を拾う
+  const found = [];
+  groups.forEach(group=>{
+    group.items.slice().sort((a,b)=>b.length-a.length).forEach(word=>{
+      if(text.includes(word)){
+        found.push({ word, group: group[key], department: group.department, careTips: group.careTips || null });
+      }
+    });
+  });
+  return found;
+}
+
+function findFlat(text, words){
+  return words.filter(w=>text.includes(w));
+}
+
+function findTimeExpressions(text){
+  const found = findFlat(text, TIME_WORDS);
+  const regexMatches = [...text.matchAll(TIME_REGEX)].map(m=>m[0]);
+  return found.concat(regexMatches);
+}
+
+function containsAny(text, words){
+  return words.some(w=>text.includes(w));
+}
+
+function isFinishText(text){
+  const t = text.trim();
+  return FINISH_WORDS.some(w=>t===w || t.startsWith(w));
+}
+
+function analyze(text){
+  if(containsAny(text, SELF_HARM_WORDS)){
+    return { type:"selfharm" };
+  }
+  if(containsAny(text, RED_FLAGS)){
+    return { type:"emergency", matched: RED_FLAGS.filter(w=>text.includes(w)) };
+  }
+  return {
+    type:"normal",
+    bodyParts: findMatches(text, BODY_GROUPS, "system"),
+    symptoms: findMatches(text, SYMPTOM_GROUPS, "category"),
+    intensity: findFlat(text, INTENSITY_WORDS),
+    frequency: findFlat(text, FREQUENCY_WORDS),
+    times: findTimeExpressions(text),
+    finish: isFinishText(text),
+  };
+}
+
+/* =========================================================
+   3. 会話の状態管理
+   ========================================================= */
+
+const session = {
+  records: [],       // {body, symptom, department}
+  times: new Set(),
+  intensity: new Set(),
+  frequency: new Set(),
+  askedTime: false,
+  askedIntensity: false,
+  turnCount: 0,
+  emergencyShown: false,
+};
+
+function resetSession(){
+  session.records = [];
+  session.times = new Set();
+  session.intensity = new Set();
+  session.frequency = new Set();
+  session.askedTime = false;
+  session.askedIntensity = false;
+  session.turnCount = 0;
+  session.emergencyShown = false;
+}
+
+const GENERIC_DEPARTMENT_PLACEHOLDER = "症状のある部位に応じた診療科";
+
+function resolveDepartment(bp, sy){
+  if(sy && sy.department && sy.department !== GENERIC_DEPARTMENT_PLACEHOLDER) return sy.department;
+  if(bp && bp.department) return bp.department;
+  if(sy) return sy.department;
+  return null;
+}
+
+function mergeParsed(parsed){
+  parsed.times.forEach(t=>session.times.add(t));
+  parsed.intensity.forEach(t=>session.intensity.add(t));
+  parsed.frequency.forEach(t=>session.frequency.add(t));
+
+  if(parsed.bodyParts.length && parsed.symptoms.length){
+    parsed.bodyParts.forEach(bp=>{
+      parsed.symptoms.forEach(sy=>{
+        const exists = session.records.some(r=>r.body===bp.word && r.symptom===sy.word);
+        if(!exists){
+          session.records.push({ body:bp.word, bodySystem:bp.group, symptom:sy.word, category:sy.group, department:resolveDepartment(bp, sy), careTips:sy.careTips });
+        }
+      });
+    });
+  } else if(parsed.bodyParts.length){
+    parsed.bodyParts.forEach(bp=>{
+      const exists = session.records.some(r=>r.body===bp.word && !r.symptom);
+      if(!exists) session.records.push({ body:bp.word, bodySystem:bp.group, symptom:null, category:null, department:bp.department, careTips:null });
+    });
+  } else if(parsed.symptoms.length){
+    parsed.symptoms.forEach(sy=>{
+      const exists = session.records.some(r=>r.symptom===sy.word && !r.body);
+      if(!exists) session.records.push({ body:null, symptom:sy.word, category:sy.group, department: sy.department === GENERIC_DEPARTMENT_PLACEHOLDER ? "内科（部位がはっきりすれば専門科の目安も出せます）" : sy.department, careTips:sy.careTips });
+    });
+  }
+}
+
+function assessUrgency(){
+  const strong = [...session.intensity].some(w=>URGENT_INTENSITY_WORDS.includes(w));
+  const veryRecent = [...session.times].some(t=>["今日から","今朝から","今から","たった今","急に","突然"].includes(t));
+  if(strong){
+    return "程度が強いとのことなので、我慢せずになるべく早め（できれば本日中）の受診をおすすめします。";
+  }
+  if(veryRecent && session.records.length){
+    return "急に始まった症状のようです。しばらく様子を見ても構いませんが、悪化する場合や新しい症状が加わる場合はすぐ受診してください。";
+  }
+  return "数日様子を見ても改善しない場合や、少しずつ悪化する場合は受診を検討してください。";
+}
+
+function buildAckLine(parsed){
+  const parts = [];
+  parsed.bodyParts.forEach(bp=>parts.push("「"+bp.word+"」"));
+  parsed.symptoms.forEach(sy=>parts.push("「"+sy.word+"」"));
+  if(!parts.length) return null;
+
+  let line = parts.join("・") + " について了解しました。";
+
+  const extras = [];
+  parsed.frequency.forEach(f=>extras.push("「"+f+"」症状が出る"));
+  parsed.intensity.forEach(i=>extras.push("「"+i+"」程度"));
+  parsed.times.forEach(t=>extras.push("「"+t+"」"));
+  if(extras.length){
+    line += "\n" + extras.join("、") + "とのことですね。";
+  }
+  return line;
+}
+
+function summaryText(){
+  if(!session.records.length){
+    return "記録されている症状はまだありません。";
+  }
+  const lines = session.records.map(r=>{
+    let line = "・";
+    if(r.body) line += r.body;
+    if(r.symptom) line += (r.body ? "の" : "") + r.symptom;
+    return line;
+  });
+  const times = [...session.times];
+  const intensity = [...session.intensity, ...session.frequency];
+  const departments = [...new Set(session.records.map(r=>r.department).filter(Boolean))];
+
+  let out = "ここまでの内容を整理しますね。\n\n" + lines.join("\n");
+  if(times.length) out += "\n\n【時期】" + times.join("、");
+  if(intensity.length) out += "\n【程度・頻度】" + intensity.join("、");
+
+  out += "\n\n【受診の目安】\n" + assessUrgency();
+
+  if(departments.length){
+    out += "\n\n【目安となる診療科】\n" + departments.map(d=>"・"+d).join("\n");
+  }
+
+  // カテゴリごとの具体的な対応（セルフケア）をまとめて重複なく表示
+  const seenCategories = new Set();
+  const tipBlocks = [];
+  session.records.forEach(r=>{
+    if(r.category && r.careTips && !seenCategories.has(r.category)){
+      seenCategories.add(r.category);
+      tipBlocks.push("■ " + r.category + "への対応\n" + r.careTips.map(t=>"・"+t).join("\n"));
+    }
+  });
+  if(tipBlocks.length){
+    out += "\n\n【今できる対応の目安】\n" + tipBlocks.join("\n\n");
+  }
+
+  out += "\n\n※ここでの対応はあくまで一般的なセルフケアの目安です。市販薬を使う場合は必ず用法・用量を守り、"
+       + "持病がある方・妊娠中の方・小さなお子さんや高齢の方は自己判断せず医師や薬剤師に相談してください。"
+       + "症状が続く場合や強くなる場合は、早めに医療機関を受診してください。";
+  return out;
+}
+
+/* =========================================================
+   4. 応答生成
+   ========================================================= */
+
+function emergencyReply(matched){
+  session.emergencyShown = true;
+  return "⚠ 今おっしゃった内容には、緊急性が高い可能性のある症状（" + matched.join("、") + "）が含まれています。\n\n"
+    + "すぐに119番へ連絡するか、救急外来を受診してください。一人で判断せず、周りの人にも助けを求めてください。\n\n"
+    + "落ち着いてから、他に伝えたいことがあれば続けて入力してください。";
+}
+
+function selfHarmReply(){
+  return "つらい気持ちを話してくれてありがとうございます。今のお気持ちは、一人で抱え込まなくて大丈夫です。\n\n"
+    + "もしよろしければ、下記の相談窓口にも連絡してみてください。\n"
+    + "・よりそいホットライン：0120-279-338（24時間・無料）\n"
+    + "・いのちの電話：0570-064-556\n"
+    + "・チャット相談「生きづらびっと」（SNS相談）\n\n"
+    + "体の症状について話したいことがあれば、続けて教えてください。無理のない範囲で大丈夫です。";
+}
+
+function normalReply(parsed, text){
+  session.turnCount++;
+
+  if(parsed.finish && session.records.length){
+    return { text: summaryText(), tone:"care", done:true };
+  }
+
+  const ack = buildAckLine(parsed);
+  const hasAnyInfo = parsed.bodyParts.length || parsed.symptoms.length || parsed.times.length || parsed.intensity.length || parsed.frequency.length;
+
+  if(!hasAnyInfo){
+    if(session.turnCount === 1 && !session.records.length){
+      return { text: "うまく読み取れませんでした。「いつから」「どこが」「どんなふうに」を含めて、もう少し具体的に教えてください。\n例）3日前から頭が痛くて、少し熱っぽいです", tone:"bot" };
+    }
+    return { text: "もう少し詳しく教えてもらえますか？（例：場所、痛み方、いつからか など）", tone:"bot" };
+  }
+
+  let reply = "";
+  if(ack) reply += ack + "\n\n";
+
+  if(!session.times.size && !session.askedTime){
+    session.askedTime = true;
+    reply += "その症状はいつ頃からありますか？（例：3日前から、今朝から、1週間くらい前から）";
+  } else if(!session.intensity.size && !session.frequency.size && !session.askedIntensity){
+    session.askedIntensity = true;
+    reply += "症状の程度や現れ方も教えてください。（例：かなり強い、時々、動くとひどくなる など）";
+  } else {
+    reply += "他に気になる症状はありますか？なければ「ない」と入力してください。";
+  }
+  return { text: reply, tone:"bot" };
+}
+
+/* =========================================================
+   5. UI 制御
+   ========================================================= */
+
+const log = document.getElementById("log");
+const input = document.getElementById("text-input");
+const sendBtn = document.getElementById("send-btn");
+const resetBtn = document.getElementById("reset-btn");
+const chipsWrap = document.getElementById("chips");
+const aboutToggle = document.getElementById("about-toggle");
+const aboutPanel = document.getElementById("about-panel");
+
+function addMessage(role, text, tone){
+  const wrap = document.createElement("div");
+  wrap.className = "msg " + role;
+  const bubble = document.createElement("div");
+  bubble.className = "bubble" + (tone ? " " + tone : "");
+  bubble.textContent = text;
+  wrap.appendChild(bubble);
+  log.appendChild(wrap);
+  log.scrollTop = log.scrollHeight;
+}
+
+function handleUserText(text){
+  if(!text.trim()) return;
+  addMessage("user", text);
+  input.value = "";
+  autoresize();
+
+  const parsed = analyze(text);
+
+  if(parsed.type === "emergency"){
+    addMessage("bot", emergencyReply(parsed.matched), "emergency");
+    return;
+  }
+  if(parsed.type === "selfharm"){
+    addMessage("bot", selfHarmReply(), "care");
+    return;
+  }
+
+  mergeParsed(parsed);
+  const result = normalReply(parsed, text);
+  addMessage("bot", result.text, result.tone === "care" ? "care" : undefined);
+}
+
+function autoresize(){
+  input.style.height = "auto";
+  input.style.height = Math.min(input.scrollHeight, 110) + "px";
+}
+
+const CHIP_EXAMPLES = [
+  "3日前から頭が痛い",
+  "今朝から喉が痛くて熱っぽい",
+  "1週間前からお腹がゆるい",
+  "昨日から膝が腫れて痛い",
+  "最近ずっとだるくて眠れない",
+];
+
+function showGreeting(){
+  addMessage("bot",
+    "こんにちは。今のからだの調子について、話しかけるように教えてください。\n"
+    + "「いつから」「どこが」「どんなふうに」を含めてもらえると、より詳しく整理できます。\n"
+    + "例）3日前から頭が痛くて、少し熱っぽいです"
+  );
+}
+
+async function init(){
+  sendBtn.disabled = true;
+  input.disabled = true;
+  input.placeholder = "語彙データを読み込み中です…";
+
+  const data = await loadVocab();
+  applyVocab(data);
+
+  sendBtn.disabled = false;
+  input.disabled = false;
+  input.placeholder = "例）3日前から頭が痛くて、少し熱っぽいです";
+
+  sendBtn.addEventListener("click", ()=>handleUserText(input.value));
+  input.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter" && !e.shiftKey){
+      e.preventDefault();
+      handleUserText(input.value);
+    }
+  });
+  input.addEventListener("input", autoresize);
+
+  resetBtn.addEventListener("click", ()=>{
+    resetSession();
+    log.innerHTML = "";
+    showGreeting();
+  });
+
+  CHIP_EXAMPLES.forEach(ex=>{
+    const b = document.createElement("button");
+    b.textContent = ex;
+    b.addEventListener("click", ()=>{ input.value = ex; handleUserText(ex); });
+    chipsWrap.appendChild(b);
+  });
+
+  aboutToggle.addEventListener("click", ()=>{
+    const isOpen = aboutPanel.style.display === "block";
+    aboutPanel.style.display = isOpen ? "none" : "block";
+    aboutPanel.innerHTML =
+      "このチャットは、あらかじめ用意した「体の部位（" + formatNumber(bodyWordCount) + "語）」"
+      + "「症状の表現（" + formatNumber(symptomWordCount) + "語）」"
+      + "「程度・頻度の表現（" + formatNumber(modifierWordCount) + "語）」"
+      + "「時期の表現（" + formatNumber(timeWordCount) + "語＋数字表現）」を、"
+      + "vocab.json というファイルにまとめて持ち、入力文の中から単語ごとに探して意味を理解しています。"
+      + "これらは自由に組み合わせて使えるため、"
+      + formatNumber(bodyWordCount) + "×" + formatNumber(symptomWordCount) + "×"
+      + formatNumber(modifierWordCount) + "×" + formatNumber(timeWordCount)
+      + " で 約" + formatNumber(combinationCount) + " 通り以上の言い回しに対応できます。"
+      + "特定の病気を診断するものではなく、一般的な整理を行うためのしくみです。";
+  });
+
+  showGreeting();
+}
+
+init();
+</script>
+
+<script type="application/json" id="vocab-fallback">
+{
+  "bodyGroups": [
+    {
+      "system": "頭部・顔",
+      "department": "内科 / 脳神経内科",
+      "items": [
+        "頭",
+        "頭部",
+        "頭全体",
+        "頭頂部",
+        "頭頂",
+        "後頭部",
+        "側頭部",
+        "前頭部",
+        "こめかみ",
+        "こめかみの右",
+        "こめかみの左",
+        "額",
+        "眉間",
+        "眉",
+        "眉毛",
+        "目",
+        "目の奥",
+        "眼",
+        "右目",
+        "左目",
+        "まぶた",
+        "まつ毛",
+        "涙腺",
+        "耳",
+        "耳の奥",
+        "耳たぶ",
+        "右耳",
+        "左耳",
+        "鼻",
+        "鼻の奥",
+        "鼻筋",
+        "鼻先",
+        "鼻の穴",
+        "小鼻",
+        "口",
+        "口の中",
+        "唇",
+        "上唇",
+        "下唇",
+        "舌",
+        "舌の先",
+        "舌の付け根",
+        "歯",
+        "歯全体",
+        "奥歯",
+        "前歯",
+        "親知らず",
+        "歯茎",
+        "顎",
+        "あご",
+        "顎関節",
+        "頬",
+        "ほほ",
+        "右頬",
+        "左頬",
+        "顔",
+        "顔全体",
+        "顔の右側",
+        "顔の左側",
+        "頭の右側",
+        "頭の左側",
+        "生え際",
+        "のどちんこ",
+        "口角",
+        "脳",
+        "脳の中",
+        "あたま",
+        "おでこ",
+        "まゆげ",
+        "みみ",
+        "はな",
+        "くちびる"
+      ]
+    },
+    {
+      "system": "首・喉",
+      "department": "耳鼻咽喉科 / 内科",
+      "items": [
+        "首",
+        "首全体",
+        "首の右側",
+        "首の左側",
+        "のど",
+        "喉",
+        "喉の奥",
+        "のどぼとけ",
+        "扁桃",
+        "扁桃腺",
+        "首の後ろ",
+        "うなじ",
+        "首筋",
+        "甲状腺のあたり",
+        "気管のあたり",
+        "気管",
+        "首の付け根",
+        "肩と首の間",
+        "食道の入り口",
+        "くび"
+      ]
+    },
+    {
+      "system": "胸部",
+      "department": "呼吸器内科 / 循環器内科",
+      "items": [
+        "胸",
+        "胸全体",
+        "胸の中央",
+        "胸の左側",
+        "胸の右側",
+        "右胸",
+        "左胸",
+        "胸の下",
+        "心臓のあたり",
+        "肋骨",
+        "肋骨の下",
+        "胸骨",
+        "脇腹の上",
+        "脇の下",
+        "乳房",
+        "乳首",
+        "背中の上部",
+        "肩甲骨の間",
+        "みぞおちの上",
+        "むね"
+      ]
+    },
+    {
+      "system": "腹部",
+      "department": "消化器内科 / 内科",
+      "items": [
+        "お腹",
+        "腹",
+        "腹全体",
+        "おなか",
+        "上腹部",
+        "下腹部",
+        "右上腹部",
+        "左上腹部",
+        "右下腹部",
+        "左下腹部",
+        "へそ周り",
+        "おへそ",
+        "おへその上",
+        "おへその下",
+        "胃のあたり",
+        "みぞおち",
+        "脇腹",
+        "右脇腹",
+        "左脇腹",
+        "下腹",
+        "恥骨のあたり",
+        "腸のあたり",
+        "腸",
+        "大腸のあたり",
+        "小腸のあたり",
+        "肝臓のあたり",
+        "膵臓のあたり",
+        "盲腸のあたり"
+      ]
+    },
+    {
+      "system": "背中・腰",
+      "department": "整形外科 / 内科",
+      "items": [
+        "背中",
+        "背中全体",
+        "背中の下部",
+        "右背中",
+        "左背中",
+        "肩甲骨",
+        "腰",
+        "腰全体",
+        "腰の右側",
+        "腰の左側",
+        "仙骨のあたり",
+        "仙腸関節のあたり",
+        "尾てい骨",
+        "脊椎",
+        "背骨",
+        "背筋",
+        "せなか",
+        "こし"
+      ]
+    },
+    {
+      "system": "肩・腕・手",
+      "department": "整形外科",
+      "items": [
+        "肩",
+        "肩全体",
+        "肩の付け根",
+        "右肩",
+        "左肩",
+        "二の腕",
+        "腕",
+        "右腕",
+        "左腕",
+        "肘",
+        "肘の内側",
+        "肘の外側",
+        "前腕",
+        "手首",
+        "手首の内側",
+        "手首の外側",
+        "手首から先",
+        "手",
+        "手のひら",
+        "手のひら全体",
+        "手の甲",
+        "手の甲全体",
+        "指",
+        "指の関節",
+        "指先",
+        "親指",
+        "人差し指",
+        "中指",
+        "薬指",
+        "小指",
+        "爪",
+        "うで",
+        "てくび",
+        "ゆび",
+        "おやゆび"
+      ]
+    },
+    {
+      "system": "脚・足",
+      "department": "整形外科",
+      "items": [
+        "股関節",
+        "股関節の右",
+        "股関節の左",
+        "太もも",
+        "もも",
+        "太ももの前",
+        "太ももの裏",
+        "膝",
+        "ひざ",
+        "膝の裏",
+        "膝のお皿",
+        "すね",
+        "すねの内側",
+        "ふくらはぎ",
+        "足首",
+        "足首の外側",
+        "足首の内側",
+        "足",
+        "足の裏",
+        "土踏まず",
+        "かかと",
+        "足の甲",
+        "足の甲全体",
+        "足の指",
+        "足の爪",
+        "足の爪の周り",
+        "つまさき"
+      ]
+    },
+    {
+      "system": "皮膚",
+      "department": "皮膚科",
+      "items": [
+        "肌",
+        "皮膚",
+        "全身の皮膚",
+        "顔の皮膚",
+        "頭皮",
+        "首の皮膚",
+        "背中の皮膚",
+        "腕の皮膚",
+        "手の皮膚",
+        "お腹の皮膚",
+        "胸の皮膚",
+        "足の皮膚",
+        "陰部の皮膚",
+        "粘膜",
+        "はだ"
+      ]
+    },
+    {
+      "system": "泌尿・生殖器",
+      "department": "泌尿器科 / 婦人科",
+      "items": [
+        "排尿時",
+        "尿道",
+        "尿道の出口",
+        "膀胱のあたり",
+        "陰部",
+        "会陰部",
+        "下腹部の奥",
+        "生理",
+        "月経",
+        "おりもの",
+        "精巣のあたり",
+        "前立腺のあたり",
+        "子宮のあたり",
+        "卵巣のあたり"
+      ]
+    },
+    {
+      "system": "精神・全身",
+      "department": "心療内科 / 精神科 / 内科",
+      "items": [
+        "体全体",
+        "全身",
+        "気分",
+        "心",
+        "頭の中",
+        "気持ち",
+        "体",
+        "身体全体",
+        "頭の後ろのほう",
+        "全身の関節",
+        "全身の筋肉",
+        "呼吸全体",
+        "からだ",
+        "きもち"
+      ]
+    }
+  ],
+  "symptomGroups": [
+    {
+      "category": "痛み",
+      "department": "症状のある部位に応じた診療科",
+      "careTips": [
+        "体を締め付けない楽な姿勢で安静にする",
+        "急な怪我によるものなら冷やす、慢性的なこわばりなら温めると楽になることがある",
+        "市販薬を使う場合は必ず用法・用量を守り、迷ったら薬剤師や医師に相談する",
+        "2〜3日たっても改善しない、または悪化する場合は受診する"
+      ],
+      "items": [
+        "痛い",
+        "痛み",
+        "痛む",
+        "ズキズキする",
+        "ズキズキ",
+        "キリキリする",
+        "キリキリ",
+        "チクチクする",
+        "チクチク",
+        "ヒリヒリする",
+        "ヒリヒリ",
+        "ジンジンする",
+        "ジンジン",
+        "ピリピリする",
+        "ピリピリ",
+        "締め付けられる",
+        "締め付け感",
+        "圧迫される",
+        "圧迫感",
+        "刺すような痛み",
+        "刺されるような痛み",
+        "焼けるような痛み",
+        "割れるような痛み",
+        "脈打つような痛み",
+        "波打つ痛み",
+        "鈍い痛み",
+        "鋭い痛み",
+        "じんわり痛い",
+        "うずく",
+        "うずき",
+        "突っ張る",
+        "つっぱる感じ",
+        "こわばる",
+        "こわばり",
+        "重だるい",
+        "重い感じ",
+        "張る感じ",
+        "張り",
+        "動かすと痛い",
+        "触ると痛い",
+        "押すと痛い",
+        "夜になると痛む",
+        "朝方に痛む",
+        "つる感じ",
+        "つった",
+        "こむら返り",
+        "痙攣するような痛み",
+        "いたい",
+        "いたみ",
+        "いたむ",
+        "ずきずき",
+        "ちくちく",
+        "ひりひり",
+        "じんじん",
+        "ぴりぴり",
+        "痛くなる",
+        "痛くなってきた",
+        "痛かった",
+        "痛くて",
+        "こる",
+        "こり",
+        "肩こり"
+      ]
+    },
+    {
+      "category": "発熱・悪寒",
+      "department": "内科",
+      "careTips": [
+        "こまめに水分を摂る（経口補水液もおすすめ）",
+        "消化の良いものを少量ずつ食べる",
+        "悪寒があるときは温め、熱が上がりきったら薄着にして熱を逃がす",
+        "汗をかいたらこまめに着替える",
+        "高熱が2〜3日以上続く、ぐったりしている場合は受診する"
+      ],
+      "items": [
+        "熱がある",
+        "発熱",
+        "高熱",
+        "微熱",
+        "熱っぽい",
+        "熱っぽさが続く",
+        "体温が高い",
+        "平熱より高い",
+        "悪寒",
+        "寒気",
+        "震えが止まらない",
+        "体が熱い",
+        "汗が止まらない",
+        "冷や汗",
+        "顔がほてる",
+        "のぼせる",
+        "熱が上がったり下がったりする",
+        "寒気がして震える",
+        "布団に入っても寒い",
+        "はつねつ",
+        "おかん",
+        "さむけ",
+        "ねつっぽい"
+      ]
+    },
+    {
+      "category": "消化器症状",
+      "department": "消化器内科",
+      "careTips": [
+        "水分や経口補水液を少量ずつこまめに摂る",
+        "脂っこいもの・刺激物・アルコールを控える",
+        "嘔吐や下痢が続くときは無理に食べようとしない",
+        "便に血が混じる、真っ黒い便が出る場合はすぐ受診する"
+      ],
+      "items": [
+        "吐き気",
+        "嘔吐",
+        "吐いた",
+        "下痢",
+        "便秘",
+        "お腹がゆるい",
+        "お腹が張る",
+        "げっぷが出る",
+        "胸焼け",
+        "食欲がない",
+        "食欲不振",
+        "胃もたれ",
+        "便に血が混じる",
+        "黒い便",
+        "お腹がゴロゴロする",
+        "胃が痛い",
+        "胃がキリキリする",
+        "みぞおちが痛い",
+        "お腹がキュルキュルする",
+        "ガスがたまる感じ",
+        "便が細い",
+        "便が出にくい",
+        "残便感がある",
+        "食べるとすぐお腹がいっぱいになる",
+        "喉のつかえ感",
+        "飲み込みにくい",
+        "しゃっくりが止まらない",
+        "はきけ",
+        "おうと",
+        "げり",
+        "べんぴ"
+      ]
+    },
+    {
+      "category": "呼吸器症状",
+      "department": "呼吸器内科",
+      "careTips": [
+        "室内を適度に加湿する",
+        "水分をとって痰を出しやすくする",
+        "たばこの煙など刺激になるものを避ける",
+        "呼吸が苦しい、唇の色が悪いなど強い症状があればすぐ受診する"
+      ],
+      "items": [
+        "咳が出る",
+        "咳",
+        "痰が出る",
+        "痰",
+        "息苦しい",
+        "息切れ",
+        "呼吸が浅い",
+        "呼吸が苦しい",
+        "喘鳴",
+        "ゼーゼーする",
+        "くしゃみ",
+        "鼻水",
+        "鼻づまり",
+        "声がかすれる",
+        "夜になると咳がひどくなる",
+        "痰に血が混じる",
+        "呼吸のたびに音がする",
+        "のどがイガイガする",
+        "のどに違和感がある",
+        "話すと息が切れる",
+        "少し動いただけで息が上がる",
+        "せき",
+        "いきぎれ"
+      ]
+    },
+    {
+      "category": "循環器症状",
+      "department": "循環器内科",
+      "careTips": [
+        "激しい運動を控えて安静にする",
+        "むくみがあるときは脚を高くして休む",
+        "カフェインやアルコールを控える",
+        "動悸や胸の違和感が続く、繰り返す場合は早めに受診する"
+      ],
+      "items": [
+        "動悸",
+        "脈が速い",
+        "脈が飛ぶ",
+        "脈が乱れる",
+        "脈が不規則",
+        "胸がドキドキする",
+        "胸がざわざわする",
+        "立ちくらみ",
+        "急に立つとくらっとする",
+        "むくみ",
+        "むくむ",
+        "足がむくむ",
+        "手足が冷たい",
+        "手足の先が冷える",
+        "どうき"
+      ]
+    },
+    {
+      "category": "神経症状",
+      "department": "脳神経内科",
+      "careTips": [
+        "転倒しないよう無理に動かず、めまいがあるときは座るか横になる",
+        "車の運転や高所での作業を控える",
+        "急に力が入らない、しびれが強くなった場合は様子を見ずすぐ受診する"
+      ],
+      "items": [
+        "めまい",
+        "ふらつく",
+        "しびれる",
+        "しびれ",
+        "感覚がない",
+        "力が入らない",
+        "力が抜ける感じ",
+        "ろれつが回らない",
+        "物が二重に見える",
+        "視野が欠ける",
+        "記憶が飛ぶ",
+        "意識が遠のく",
+        "頭がぼーっとする",
+        "頭が働かない",
+        "手がしびれる",
+        "足がしびれる",
+        "顔の一部がしびれる",
+        "震えが出る",
+        "手が震える",
+        "めまいで立てない",
+        "天井が回る感じ"
+      ]
+    },
+    {
+      "category": "皮膚症状",
+      "department": "皮膚科",
+      "careTips": [
+        "かかずに冷やす",
+        "刺激の少ない服・石けんを選ぶ",
+        "患部を清潔に保つ",
+        "急速に広がる、水ぶくれが破れる、発熱を伴う場合は受診する"
+      ],
+      "items": [
+        "かゆい",
+        "かゆみ",
+        "発疹",
+        "赤み",
+        "湿疹",
+        "じんましん",
+        "水ぶくれ",
+        "腫れる",
+        "腫れ",
+        "むくみが出る",
+        "かさぶた",
+        "肌荒れ",
+        "乾燥する",
+        "色が変わる",
+        "皮がむける",
+        "かさかさする",
+        "ジュクジュクする",
+        "膿が出る",
+        "出血斑ができる",
+        "あざができやすい",
+        "蚊に刺されたような跡",
+        "日焼けのようになる",
+        "ほっしん",
+        "しっしん"
+      ]
+    },
+    {
+      "category": "精神・全身症状",
+      "department": "心療内科・精神科",
+      "careTips": [
+        "睡眠・食事のリズムをできる範囲で整える",
+        "無理をせず、休める時間を確保する",
+        "一人で抱え込まず、周囲の人や専門家に話す",
+        "つらい状態が2週間以上続く場合は心療内科・精神科への相談を検討する"
+      ],
+      "items": [
+        "だるい",
+        "倦怠感",
+        "疲れが取れない",
+        "眠れない",
+        "不眠",
+        "気分が落ち込む",
+        "やる気が出ない",
+        "不安になる",
+        "イライラする",
+        "集中できない",
+        "食欲の変化",
+        "涙が出やすい",
+        "何もやる気が起きない",
+        "人に会いたくない",
+        "焦りを感じる",
+        "動悸と一緒に不安になる",
+        "朝起きるのがつらい",
+        "食べ過ぎてしまう",
+        "急に体重が減った",
+        "急に体重が増えた",
+        "けんたいかん",
+        "ふみん"
+      ]
+    },
+    {
+      "category": "泌尿・生殖器症状",
+      "department": "泌尿器科・婦人科",
+      "careTips": [
+        "水分を多めに摂る",
+        "体、特に下半身を冷やさない",
+        "排泄を我慢しすぎない",
+        "血尿や強い痛み、発熱を伴う場合は早めに受診する"
+      ],
+      "items": [
+        "排尿時に痛む",
+        "頻尿",
+        "尿が出にくい",
+        "尿の色が濃い",
+        "血尿",
+        "生理不順",
+        "生理痛がひどい",
+        "おりものの異常",
+        "残尿感がある",
+        "尿の勢いが弱い",
+        "尿に泡が多い",
+        "股間に違和感がある",
+        "生理の量が多い",
+        "生理の量が少ない",
+        "不正出血がある",
+        "ひんにょう",
+        "けつにょう"
+      ]
+    },
+    {
+      "category": "目・耳の症状",
+      "department": "眼科・耳鼻咽喉科",
+      "careTips": [
+        "目や耳をこすらない",
+        "強い光や大きな音を避けて休む",
+        "コンタクトレンズは外して眼鏡にする",
+        "症状が急に悪化する、視力や聴力が明らかに落ちる場合はすぐ受診する"
+      ],
+      "items": [
+        "目やにが出る",
+        "目が充血する",
+        "涙が止まらない",
+        "目がかすむ",
+        "視界がぼやける",
+        "まぶしく感じる",
+        "耳鳴りがする",
+        "耳が聞こえにくい",
+        "耳がつまった感じ",
+        "耳だれが出る",
+        "耳の中がかゆい",
+        "めまいと耳鳴りが一緒に起こる",
+        "みみなりがする"
+      ]
+    },
+    {
+      "category": "口・喉のその他症状",
+      "department": "耳鼻咽喉科・歯科",
+      "careTips": [
+        "こまめに水分・うがいで口の中を清潔に保つ",
+        "刺激の強い食べ物・熱い飲食物を避ける",
+        "無理に声を出さず喉を休める",
+        "強い痛みで水分も飲み込めない場合は早めに受診する"
+      ],
+      "items": [
+        "口内炎ができる",
+        "口の中が乾く",
+        "味がわからない",
+        "口臭が気になる",
+        "歯がしみる",
+        "歯ぐきから血が出る",
+        "喉が渇く",
+        "唾を飲み込むと痛い",
+        "声がまったく出ない"
+      ]
+    }
+  ],
+  "intensityWords": [
+    "少し",
+    "やや",
+    "かなり",
+    "非常に",
+    "我慢できないほど",
+    "耐えられないくらい",
+    "軽い",
+    "強い",
+    "激しい",
+    "ひどい",
+    "だんだん強くなる",
+    "急激に強くなる",
+    "波のように強くなったり弱くなったりする",
+    "我慢できる程度",
+    "気にならない程度",
+    "かろうじて我慢できる",
+    "日に日にひどくなる",
+    "一瞬だけ強い"
+  ],
+  "frequencyWords": [
+    "時々",
+    "たまに",
+    "頻繁に",
+    "常に",
+    "ずっと",
+    "断続的に",
+    "波があるように",
+    "一日中",
+    "夜になると",
+    "朝になると",
+    "食後に",
+    "食前に",
+    "運動すると",
+    "安静にしていても",
+    "動くと",
+    "じっとしていると",
+    "横になると",
+    "起き上がると",
+    "ストレスがあると",
+    "毎日",
+    "毎晩",
+    "週に数回",
+    "月に数回",
+    "天気が悪いと",
+    "気圧が下がると",
+    "季節の変わり目に",
+    "生理の前後に",
+    "寝ている間に",
+    "起きてすぐ",
+    "入浴すると",
+    "冷えると",
+    "疲れると",
+    "緊張すると",
+    "座ると",
+    "立つと",
+    "立ち上がると",
+    "しゃがむと",
+    "かがむと",
+    "前かがみになると",
+    "体を反らすと",
+    "振り向くと",
+    "首を回すと",
+    "首を傾けると",
+    "体をひねると",
+    "腰を曲げると",
+    "階段を上ると",
+    "階段を下りると",
+    "歩くと",
+    "走ると",
+    "少し歩いただけで",
+    "長時間歩くと",
+    "長時間立っていると",
+    "長時間座っていると",
+    "座りっぱなしでいると",
+    "深呼吸すると",
+    "咳をすると",
+    "くしゃみをすると",
+    "飲み込むと",
+    "噛むと",
+    "話すと",
+    "大きく口を開けると",
+    "目を動かすと",
+    "目を閉じると",
+    "目を使い続けると",
+    "スマホを見ていると",
+    "パソコンを使うと",
+    "力を入れると",
+    "力むと",
+    "いきむと",
+    "重い物を持つと",
+    "体をひねったときに",
+    "寝返りを打つと",
+    "うつ伏せになると",
+    "横向きに寝ると",
+    "仰向けに寝ると",
+    "お風呂に入ると",
+    "シャワーを浴びると",
+    "汗をかくと",
+    "冷たいものを飲むと",
+    "熱いものを飲むと",
+    "体を冷やすと",
+    "気温が下がると",
+    "天気が変わると",
+    "排便時に",
+    "力を抜くと"
+  ],
+  "timeWords": [
+    "今日から",
+    "今朝から",
+    "昨日から",
+    "一昨日から",
+    "おととい",
+    "今週から",
+    "先週から",
+    "先々週から",
+    "今月から",
+    "先月から",
+    "先々月から",
+    "今から",
+    "たった今",
+    "数分前から",
+    "数時間前から",
+    "数日前から",
+    "3日前くらいから",
+    "数週間前から",
+    "数ヶ月前から",
+    "1ヶ月半前から",
+    "半年前から",
+    "1年前から",
+    "去年から",
+    "数年前から",
+    "何年も前から",
+    "子供の頃から",
+    "生まれつき",
+    "急に",
+    "突然",
+    "思い出せないくらい前から",
+    "起きた瞬間から",
+    "気づいたら",
+    "少しずつ前から",
+    "以前からたびたび",
+    "再発した",
+    "前にもあった"
+  ],
+  "urgentIntensityWords": [
+    "激しい",
+    "耐えられないくらい",
+    "我慢できないほど",
+    "ひどい",
+    "非常に",
+    "急激に強くなる"
+  ],
+  "redFlags": [
+    "意識がない",
+    "呼びかけに反応しない",
+    "呼吸をしていない",
+    "呼吸が止まった",
+    "唇が紫色",
+    "けいれんしている",
+    "けいれん発作",
+    "大量に出血",
+    "出血が止まらない",
+    "胸が締め付けられるように痛い",
+    "冷や汗を伴う胸の痛み",
+    "突然のろれつが回らない",
+    "呂律が回らず言葉が出ない",
+    "顔の片側が動かない",
+    "顔がゆがんでいる",
+    "片方の手足に急に力が入らない",
+    "手足が急に動かせない",
+    "片目が急に見えなくなった",
+    "視界が急に真っ暗になった",
+    "今までで一番激しい頭痛",
+    "強い頭痛と吐き気が同時にある",
+    "高熱で意識がもうろう",
+    "真っ黒い便が出る",
+    "吐血した",
+    "妊娠中の激しい下腹部の痛み",
+    "突然の激しい腹痛で動けない",
+    "刺された",
+    "強く頭を打った",
+    "高い場所から落ちた",
+    "交通事故にあった",
+    "骨が飛び出ている",
+    "首を絞められた",
+    "溺れ",
+    "大量の薬を飲んでしまった"
+  ],
+  "selfHarmWords": [
+    "死にたい",
+    "消えたい",
+    "自殺したい",
+    "生きているのがつらい",
+    "死のうと思う",
+    "自分を傷つけたい",
+    "リストカット",
+    "もう終わりにしたい",
+    "もう限界",
+    "消えてしまいたい",
+    "誰もいなくなればいい",
+    "自分なんていない方がいい"
+  ],
+  "finishWords": [
+    "ない",
+    "特にない",
+    "もうない",
+    "以上です",
+    "以上",
+    "終わり",
+    "大丈夫です",
+    "もう平気",
+    "それだけです",
+    "ありません",
+    "特にありません",
+    "もう大丈夫",
+    "それで全部です",
+    "以上で終わります",
+    "ほかにはないです"
+  ]
+}
+</script>
+</body>
+</html>
