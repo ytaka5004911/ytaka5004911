@@ -9,4 +9,4 @@
 - PWA機能(PWA Features)
 
  
-  [サイト(Site)](https://ytaka5004911.github.io/ytaka5004911/index.html)
+  [サイトへ移動(Go to the site)](https://ytaka5004911.github.io/ytaka5004911/index.html)
