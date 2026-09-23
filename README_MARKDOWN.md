@@ -7,4 +7,6 @@
 - Google検索(Google Search)
 - 各リンクへの転送(Redirect to each link)
 - PWA機能(PWA Features)
-  [https://ytaka5004911.github.io/ytaka5004911/index.html](リンク)
+
+ 
+  [サイト(Site)](https://ytaka5004911.github.io/ytaka5004911/index.html)
