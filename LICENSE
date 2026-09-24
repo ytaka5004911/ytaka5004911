@@ -1,10 +1,10 @@
-Copyright (c) 2026 ytaka500491(ytaka5004911). All rights reserved.
+Copyright (c) 2026 ytaka5004911. All rights reserved.
 
-本リポジトリ内のすべてのソースコード、デザイン、コンテンツの無断利用、複製、改変、再配布、および商用利用の一切を禁止します。
-(All rights reserved. Unauthorized copying, modification, distribution, or commercial use of this source code is strictly prohibited.)
-You are welcome to use this project as a reference, but please do not copy and paste the code or design entirely.
-Feel free to browse and view the live GitHub Pages site.
-Please do not duplicate or mirror the website for your own live production.
-このプロジェクトを参考にすることは構いませんが、コードやデザインをそのままコピー＆ペーストすることはご遠慮ください。
-公開中のGitHub Pagesサイトを、ご自由にご覧ください。
-ご自身の本番環境用に、このウェブサイトを複製またはミラーリングすることはご遠慮ください。
+You may:
+- View and use the live GitHub Pages site.
+- Read the source code for learning and reference, provided you write your own implementation from scratch.
+
+You may not, without prior written permission:
+- Copy, mirror, or redistribute the source code, design, or content of this repository.
+- Publish, host, or commercially use any copy of this project.
+- Publish modified or derivative versions of this project.
