@@ -43,6 +43,7 @@
       </nav>
     </main>
     <script>
+      window.show=()=>document.body.hidden=false;
       (() => {
         setInterval(()=>clock.textContent=new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}),1000)
         const s = document.getElementById('search');
@@ -84,9 +85,14 @@
             e.ariaHidden = 'true';
             e.hidden = true;
           }
+          show();
         };
 
-        const sitesList=document.getElementById('sites');const onData=x=>(sites=x.sites,x.sites.forEach(s=>sitesList.innerHTML+=`<option value="${s.name}">`))
+        const sitesList=document.getElementById('sites');const onData=x=>{
+  sites=x.sites;
+  sitesList.innerHTML=x.sites.map(s=>`<option value="${s.name}">`).join('');
+  show();
+};
 
         if (typeof fetch === 'function') {
           fetch('/ytaka5004911/sites.json')
