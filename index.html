@@ -24,7 +24,8 @@
       <div id="clock"></div>
       <form rel="noreferrer noopener" id="searchForm" role="search" action="https://www.google.com/search" method="get" target="_blank">
         <label for="search">Googleで検索する</label>
-        <input aria-label="Googleで検索する内容" enterkeyhint="search" inputmode="search" id="search" autocapitalize="off" autocomplete="off" placeholder="Googleで検索します..." required type="text" name="q">
+        <input list="sites" aria-label="Googleで検索する内容" enterkeyhint="search" inputmode="search" id="search" autocapitalize="off" autocomplete="off" placeholder="Googleで検索します..." required type="text" name="q">
+        <datalist id="sites"></datalist>
         <input type="hidden" name="ie" value="UTF-8">
         <input type="hidden" name="oe" value="UTF-8">
         <input type="hidden" name="hl" value="ja">
@@ -85,7 +86,7 @@
           }
         };
 
-        const onData = (x) => { sites = x.sites; };
+        const sitesList=document.getElementById('sites');const onData=x=>(sites=x.sites,x.sites.forEach(s=>sitesList.innerHTML+=`<option value="${s.name}">`))
 
         if (typeof fetch === 'function') {
           fetch('/ytaka5004911/sites.json')
