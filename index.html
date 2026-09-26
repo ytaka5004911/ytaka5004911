@@ -41,7 +41,7 @@
           <li><a target="_self" href="https://ytaka5004911.github.io/MedChartLite/index.html">MedChartLite</a></li>
         </ul>
       </nav>
-    </main>
+    </main><select id="themeSelect" onchange="localStorage.theme=this.value;setTheme(this.value)"><option value="light">ライトモード</option><option value="dark">ダークモード</option></select><script>const s=document.getElementById('themeSelect'),setTheme=t=>(document.body.style.backgroundColor=t==='dark'?'#1a1a1a':'#fff',document.body.style.color=t==='dark'?'#fff':'#000');s.value=localStorage.theme||'light';setTheme(s.value)</script>
     <script>
       window.show=()=>document.body.hidden=false;
       (() => {
