@@ -82,9 +82,9 @@
       "name": "99 Nights in the Forest Wiki",
       "url": "https://99-nights-in-the-forest.fandom.com/wiki/99_Nights_in_the_Forest_Wiki",
       "aliases": [
-        "99 nights",
-        "99 nights in the forest",
-        "99 nights wiki"
+        "99nights",
+        "99nightsintheforest",
+        "99nightswiki"
       ],
       "category": "games"
     },
@@ -119,7 +119,7 @@
       "name": "Brave Search",
       "url": "https://search.brave.com/",
       "aliases": [
-        "brave search"
+        "bravesearch"
       ],
       "category": "search"
     },
@@ -161,7 +161,7 @@
       "name": "Yahoo! Mail",
       "url": "https://mail.yahoo.co.jp/",
       "aliases": [
-        "yahoo mail"
+        "yahoomail"
       ],
       "category": "mail"
     },
@@ -170,7 +170,7 @@
       "url": "https://drive.google.com/",
       "aliases": [
         "drive",
-        "google drive"
+        "googledrive"
       ],
       "category": "cloud"
     },
@@ -179,7 +179,7 @@
       "url": "https://onedrive.live.com/",
       "aliases": [
         "onedrive",
-        "one drive"
+        "onedrive"
       ],
       "category": "cloud"
     },
@@ -196,7 +196,7 @@
       "url": "https://docs.google.com/",
       "aliases": [
         "docs",
-        "google docs"
+        "googledocs"
       ],
       "category": "productivity"
     },
@@ -205,7 +205,7 @@
       "url": "https://sheets.google.com/",
       "aliases": [
         "sheets",
-        "google sheets"
+        "googlesheets"
       ],
       "category": "productivity"
     },
@@ -214,7 +214,7 @@
       "url": "https://slides.google.com/",
       "aliases": [
         "slides",
-        "google slides"
+        "googleslides"
       ],
       "category": "productivity"
     },
@@ -232,7 +232,7 @@
       "url": "https://maps.google.com/",
       "aliases": [
         "maps",
-        "google maps"
+        "googlemaps"
       ],
       "category": "maps"
     },
@@ -240,8 +240,8 @@
       "name": "YouTube Music",
       "url": "https://music.youtube.com/",
       "aliases": [
-        "youtube music",
-        "yt music"
+        "youtubemusic",
+        "ytmusic"
       ],
       "category": "music"
     },
@@ -301,7 +301,7 @@
       "url": "https://stackoverflow.com/",
       "aliases": [
         "stackoverflow",
-        "stack overflow"
+        "stackoverflow-"
       ],
       "category": "development"
     },
@@ -326,7 +326,7 @@
       "url": "https://developer.mozilla.org/",
       "aliases": [
         "mdn",
-        "mozilla developer"
+        "mozilladeveloper"
       ],
       "category": "development"
     },
@@ -427,7 +427,7 @@
       "url": "https://teams.microsoft.com/",
       "aliases": [
         "teams",
-        "microsoft teams"
+        "microsoftteams"
       ],
       "category": "work"
     },
@@ -549,7 +549,7 @@
       "name": "Yahoo! Shopping",
       "url": "https://shopping.yahoo.co.jp/",
       "aliases": [
-        "yahoo shopping"
+        "yahooshopping"
       ],
       "category": "shopping"
     },
@@ -566,7 +566,7 @@
       "url": "https://gemini.google.com/",
       "aliases": [
         "gemini",
-        "google gemini"
+        "googlegemini"
       ],
       "category": "ai"
     },
@@ -583,7 +583,7 @@
       "url": "https://huggingface.co/",
       "aliases": [
         "huggingface",
-        "hugging face"
+        "huggingfacef"
       ],
       "category": "ai"
     },
@@ -600,7 +600,7 @@
       "url": "https://translate.google.com/",
       "aliases": [
         "translate",
-        "google translate"
+        "googletranslate"
       ],
       "category": "translation"
     },
