@@ -158,7 +158,7 @@ body {
   </div>
 <button class="btn" onclick="localStorage.removeItem('mixHistory');renderHistory();">履歴を削除する</button><br>
   <button id="closeSettings" style="margin-top: 20px;" class="btn">閉じる</button>
-</div>
+</div><select id="themeSelect" onchange="localStorage.theme=this.value;setTheme(this.value)"><option value="light">ライトモード</option><option value="dark">ダークモード</option></select><script>const s=document.getElementById('themeSelect'),setTheme=t=>(document.body.style.backgroundColor=t==='dark'?'#1a1a1a':'#fff',document.body.style.color=t==='dark'?'#fff':'#000');s.value=localStorage.theme||'light';setTheme(s.value)</script>
 <script>
 (function(){
 try {
