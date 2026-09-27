@@ -270,7 +270,7 @@
     <p>今の症状と、いつからかを話しかけるように入力してください。あとから症状を追加することもできます。</p>
   </div>
 </header>
-
+<select id="themeSelect" onchange="localStorage.theme=this.value;setTheme(this.value)"><option value="light">ライトモード</option><option value="dark">ダークモード</option></select><script>const s=document.getElementById('themeSelect'),setTheme=t=>(document.body.style.backgroundColor=t==='dark'?'#1a1a1a':'#fff',document.body.style.color=t==='dark'?'#fff':'#000');s.value=localStorage.theme||'light';setTheme(s.value)</script>
 <div class="disclaimer">
   <div class="inner">
     これは医療診断ではなく、症状の整理と受診の目安をお伝えするためのものです。<b>必ず医師の診察に代わるものではありません。</b>
