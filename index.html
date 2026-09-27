@@ -46,6 +46,7 @@
     <script>
       window.show=()=>document.body.hidden=false;
       (() => {
+        let count = 0, timer;document.getElementById("url_btn").addEventListener('click', () => {if(document.getElementById("search").value===""){clearTimeout(timer);if (++count === 5) {alert("©2026 ytaka500491 All rights reserved.");count = 0;} else {timer = setTimeout(() => count = 0, 1000);}}});
         setInterval(()=>clock.textContent=new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}),1000)
         const s = document.getElementById('search');
         if (s) {
