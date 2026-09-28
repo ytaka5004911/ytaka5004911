@@ -47,7 +47,7 @@
       window.show=()=>document.body.hidden=false;
       (() => {
         let count = 0, timer;document.getElementById("url_btn").addEventListener('click', () => {if(document.getElementById("search").value===""){clearTimeout(timer);if (++count === 5) {alert("©2026 ytaka500491 All rights reserved.");count = 0;} else {timer = setTimeout(() => count = 0, 1000);}}});
-        const clock = document.getElementById("clock"); const now = new Date();clock.textContent=now.toLocaleDateString('ja-JP', {year:'numeric', month:'2-digit', day:'2-digit'}) + ' ' + now.toTimeString().slice(0, 8);setInterval(()=>{const now = new Date();clock.textContent=now.toLocaleDateString('ja-JP', {year:'numeric', month:'2-digit', day:'2-digit'}) + ' ' + now.toTimeString().slice(0, 8)},1000)
+        const clock = document.getElementById("clock"); const now5 = new Date();clock.textContent=now5.toLocaleDateString('ja-JP', {year:'numeric', month:'2-digit', day:'2-digit'}) + ' ' + now5.toTimeString().slice(0, 8);setInterval(()=>{const now = new Date();clock.textContent=now.toLocaleDateString('ja-JP', {year:'numeric', month:'2-digit', day:'2-digit'}) + ' ' + now.toTimeString().slice(0, 8)},1000)
         const s = document.getElementById('search');
         if (s) {
           window.onbeforeunload = (e) => {
