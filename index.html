@@ -48,5 +48,17 @@ var v=S.value.replace(/^\s+|\s+$/g,'');if(e.preventDefault)e.preventDefault();el
 if(v){if(v.indexOf('://')==-1&&v.indexOf('.')!=-1)v='https://'+v;if(!v.indexOf('http')){S.value='';location.href=v;}}
 });
     </script>
+    <script>
+try{localStorage.theme}catch(e){
+window.localStorage={
+get theme(){
+var m=document.cookie.match(/(?:^|; )theme=([^;]*)/);
+return m?decodeURIComponent(m[1]):null;
+},
+set theme(v){
+document.cookie='theme='+encodeURIComponent(v)+';path=/';
+}
+};
+    </script>
   </body>
 </html>
