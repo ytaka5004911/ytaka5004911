@@ -40,25 +40,13 @@
           <li><a target="_self" href="https://ytaka5004911.github.io/MedChartLite/index.html">MedChartLite</a></li>
         </ul>
       </nav>
-    </main><select id="themeSelect" onchange="localStorage.theme=this.value;setTheme(this.value)"><option value="light">ライトモード</option><option value="dark">ダークモード</option></select><script>const s=document.getElementById('themeSelect'),setTheme=function(t){document.body.style.backgroundColor=t==='dark'?'#1a1a1a':'#fff';document.body.style.color=t==='dark'?'#fff':'#000';};s.value=localStorage.theme||'light';setTheme(s.value)</script>
+    </main><select id="themeSelect" onchange="localStorage.theme=this.value;setTheme(this.value)"><option value="light">ライトモード</option><option value="dark">ダークモード</option></select><script>var s=document.getElementById('themeSelect');var setTheme=function(t){document.body.style.backgroundColor=t==='dark'?'#1a1a1a':'#fff';document.body.style.color=t==='dark'?'#fff':'#000';};s.value=localStorage.theme||'light';setTheme(s.value)</script>
     <script>
     var S=document.getElementById('search');S&&(window.onbeforeunload=function(){if(S.value.trim())return ''});
 document.getElementById('url_btn').addEventListener('click',function(e){
 var v=S.value.replace(/^\s+|\s+$/g,'');if(e.preventDefault)e.preventDefault();else event.returnValue=false;
 if(v){if(v.indexOf('://')==-1&&v.indexOf('.')!=-1)v='https://'+v;if(!v.indexOf('http')){S.value='';location.href=v;}}
 });
-    </script>
-    <script>
-try{localStorage.theme}catch(e){
-window.localStorage={
-get theme(){
-var m=document.cookie.match(/(?:^|; )theme=([^;]*)/);
-return m?decodeURIComponent(m[1]):null;
-},
-set theme(v){
-document.cookie='theme='+encodeURIComponent(v)+';path=/';
-}
-};
     </script>
   </body>
 </html>
