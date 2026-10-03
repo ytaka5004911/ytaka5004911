@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/</loc>
+  <priority>1.0</priority>
+  <lastmod>2026-10-03T14:41:37+09:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/sym-checker/index.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-10-03T14:41:37+09:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/colorMix.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-10-03T14:41:37+09:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/faq</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-10-03T14:41:37+09:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/index.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2026-10-03T14:41:37+09:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://ytaka5004911.github.io/ytaka5004911/faq/index.html</loc>
+  <priority>0.7</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+</urlset>
