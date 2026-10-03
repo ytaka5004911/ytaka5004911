@@ -49,12 +49,6 @@ var v=S.value.replace(/^\s+|\s+$/g,'');if(e.preventDefault)e.preventDefault();el
 if(v){if(v.indexOf('://')==-1&&v.indexOf('.')!=-1)v='https://'+v;if(!v.indexOf('http')){S.value='';location.href=v;}}
 });
     </script>
-
-<script>
-var f=document.getElementById('searchForm'),s=document.getElementById('search'),d=document.getElementById('history'),h=JSON.parse(localStorage.searchHistory||'[]');
-function add(q){var x=document.createElement('div');x.style.color="#1d4ed8";x.style.textDecoration="underline";x.textContent=q;x.onclick=function(){s.value+=q};d.appendChild(x)}
-for(var i=0;i<h.length;i++)add(h[i].q);
-f.onsubmit=e=>{var q=s.value.trim();if(q){h.unshift({q:q,type:e.submitter.name==='udm'?'ai':'google'});localStorage.searchHistory=JSON.stringify(h);add(q)}}
-</script>
+<script>const $=s=>document.querySelector(s),f=$('#searchForm'),s=$('#search'),d=$('#history'),K='searchHistory';let h;try{h=JSON.parse(localStorage[K])}catch{}Array.isArray(h)||(h=[]);const v=()=>{try{localStorage[K]=JSON.stringify(h)}catch{}},w=()=>d.replaceChildren(...h.map((t,i)=>{const r=document.createElement('div'),b=document.createElement('button');r.textContent=t.q+' ';r.onclick=()=>s.value+=t.q+' ';b.type='button';b.textContent='削除';b.onclick=e=>{e.stopPropagation();h.splice(i,1);v();w()};r.append(b);return r}));f.addEventListener('submit',e=>{const q=s.value.trim();q&&(h=[{q,type:e.submitter?.name=='udm'?'ai':'google'},...h.filter(x=>x.q!=q)].slice(0,30),v())});w()</script>
   </body>
 </html>
